@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 @Controller
 public class LoginController {
@@ -23,9 +26,10 @@ public class LoginController {
     }
 
     @RequestMapping("/administrator.html")
-    public String admin_login(HttpServletRequest request){
+    public String admin_login(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String admin_pwd;
         String receive_pwd;
+        System.out.println("123");
 
         //判断账号是否存在
         if(loginMapper.ifexist_admin(request.getParameter("manager_id"))!=null){
@@ -40,7 +44,10 @@ public class LoginController {
             }
         }
         else{
-            return "login";
+            PrintWriter printWriter = response.getWriter();
+            printWriter.print("<script language=\"javascript\">alert('123123');</script>");
+            System.out.println("账号没有");
+            return null;
         }
     }
 
@@ -94,6 +101,8 @@ public class LoginController {
     public String supplier_login(HttpServletRequest request){
         String supplier_pwd;
         String receive_pwd;
+
+
 
         //判断账号是否存在
         if(loginMapper.ifexist_supplier(request.getParameter("supplier_id"))!=null){
