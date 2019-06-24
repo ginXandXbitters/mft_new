@@ -6,6 +6,11 @@ public class User {
     private String userName;
     private String userTel;
     private String userMail;
+    private String province;
+    private String city;
+    private String county;
+    private String site;
+    private int status;
 
     public String getUserID() {
         return userID;
@@ -47,6 +52,46 @@ public class User {
         this.userMail = userMail;
     }
 
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCounty() {
+        return county;
+    }
+
+    public void setCounty(String county) {
+        this.county = county;
+    }
+
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -55,6 +100,11 @@ public class User {
                 ", userName='" + userName + '\'' +
                 ", userTel='" + userTel + '\'' +
                 ", userMail='" + userMail + '\'' +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", county='" + county + '\'' +
+                ", site='" + site + '\'' +
+                ", status=" + status +
                 '}';
     }
 }
