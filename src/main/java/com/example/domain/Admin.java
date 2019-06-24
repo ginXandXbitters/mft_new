@@ -5,6 +5,7 @@ public class Admin {
     private String adminPW;
     private String adminName;
     private String adminTel;
+    private int status;
 
     public void setAdminTel(String adminTel) {
         this.adminTel = adminTel;
@@ -38,6 +39,14 @@ public class Admin {
         return adminID;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Admin{" +
@@ -45,6 +54,7 @@ public class Admin {
                 ", adminPW='" + adminPW + '\'' +
                 ", adminName='" + adminName + '\'' +
                 ", adminTel='" + adminTel + '\'' +
+                ", status=" + status +
                 '}';
     }
 }

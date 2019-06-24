@@ -5,7 +5,7 @@
     
     <!-- Basic page needs
     ============================================ -->
-    <title>SuperMarket - Multipurpose Responsive HTML5 Template</title>
+    <title>摸仙宝</title>
     <meta charset="utf-8">
     <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
     <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
@@ -270,7 +270,7 @@
                         <!--//cart-->
 
                         <ul class="wishlist-comp hidden-md hidden-sm hidden-xs">
-                            <li class="compare hidden-xs"><a href="compare.html" class="top-link-compare" title="商品比较"><i class="fa fa-refresh"></i></a>
+                            <li class="index hidden-xs"><a href="index.html" class="top-link-index" title="主页"><i class="fa fa-refresh"></i></a>
                             </li>
                             <li class="wishlist hidden-xs"><a href="wishlist.html" id="wishlist-total" class="top-link-wishlist" title="心愿单"><i class="fa fa-heart"></i></a>
                             </li>
@@ -1036,79 +1036,79 @@
 	<div class="main-container container">
 		<ul class="breadcrumb">
 			<li><a href="#"><i class="fa fa-home"></i></a></li>
-			<li><a href="#">Gift Voucher</a></li>
+			<li><a href="#">礼品赠送</a></li>
 		</ul>
 		
 		<div class="row">
 			<!--Middle Part Start-->
 			<div id="content" class="col-sm-9">
-				<h2 class="title">Purchase a Gift Card</h2>
-				<p>This gift card will be emailed to the recipient after your order has been paid for.</p>
+				<h2 class="title">购买礼品卡</h2>
+				<p>此礼品卡将在您的订单付款后通过电子邮件发送给收件人</p>
 
 				<form class="form-horizontal">
 					<div class="form-group required">
-						<label for="input-to-name" class="col-sm-2 control-label">Recipient's Name</label>
+						<label for="input-to-name" class="col-sm-2 control-label">收件人姓名</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" id="input-to-name" value="" name="to_name">
 						</div>
 					</div>
 					<div class="form-group required">
-						<label for="input-to-email" class="col-sm-2 control-label">Recipient's e-mail</label>
+						<label for="input-to-email" class="col-sm-2 control-label">收件人邮箱</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" id="input-to-email" value="" name="to_email">
 						</div>
 					</div>
 					<div class="form-group required">
-						<label for="input-from-name" class="col-sm-2 control-label">Your Name</label>
+						<label for="input-from-name" class="col-sm-2 control-label">你的名字</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" id="input-from-name" value="" name="from_name">
 						</div>
 					</div>
 					<div class="form-group required">
-						<label for="input-from-email" class="col-sm-2 control-label">Your e-mail</label>
+						<label for="input-from-email" class="col-sm-2 control-label">你的邮箱</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" id="input-from-email" value="" name="from_email">
 						</div>
 					</div>
 					<div class="form-group required">
-						<label class="col-sm-2 control-label">Gift Certificate Theme</label>
+						<label class="col-sm-2 control-label">礼券主题</label>
 						<div class="col-sm-10">
 							<div class="radio">
 								<label>
-									<input type="radio" value="8" name="voucher_theme_id"> General
+									<input type="radio" value="8" name="voucher_theme_id" checked="checked"> 通用
 								</label>
 							</div>
 							<div class="radio">
 								<label>
-									<input type="radio" value="7" name="voucher_theme_id"> Birthday
+									<input type="radio" value="7" name="voucher_theme_id"> 生日
 								</label>
 							</div>
 							<div class="radio">
 								<label>
-									<input type="radio" value="6" name="voucher_theme_id"> Christmas
+									<input type="radio" value="6" name="voucher_theme_id"> 节日
 								</label>
 							</div>
 
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="input-message" class="col-sm-2 control-label"><span title="" data-toggle="tooltip" data-original-title="Optional">Message</span>
+						<label for="input-message" class="col-sm-2 control-label"><span title="" data-toggle="tooltip" data-original-title="Optional">留言</span>
 						</label>
 						<div class="col-sm-10">
 							<textarea class="form-control" id="input-message" rows="5" cols="40" name="message"></textarea>
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="input-amount" class="col-sm-2 control-label"><span title="" data-toggle="tooltip" data-original-title="Card value can range from between $10.00 and $1,000.00">Amount</span>
+					<div class="form-group required">
+						<label for="input-amount" class="col-sm-2 control-label"><span title="" data-toggle="tooltip" data-original-title="Card value can range from between $10.00 and $1,000.00">数量</span>
 						</label>
 						<div class="col-sm-10">
-							<input type="text" size="5" class="form-control" id="input-amount" value="10" name="amount">
+							<input type="text" size="5" class="form-control" id="input-amount" value="" name="amount">
 						</div>
 					</div>
 					<div class="buttons clearfix">
-						<div class="pull-right">I understand that gift certificates are non-refundable.
+						<div class="pull-right">我已经了解礼券无法退还。
 							<input type="checkbox" value="1" name="agree"> &nbsp;
-							<input type="submit" class="btn btn-primary" value="Continue">
+							<input type="submit" class="btn btn-primary" value="确认">
 						</div>
 					</div>
 				</form>
@@ -1118,35 +1118,36 @@
 			<!--Middle Part End-->
 			<!--Right Part Start -->
 			<aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">
-				<h2 class="subtitle">Account</h2>
+				<h2 class="subtitle">我的账号</h2>
 				<div class="list-group">
 					<ul class="list-item">
-						<li><a href="login.html">Login</a>
+						<li><a href="login.html">登录</a>
 						</li>
-						<li><a href="register.html">Register</a>
+						<li><a href="register.html">注册</a>
 						</li>
-						<li><a href="#">Forgotten Password</a>
+						<!--<li><a href="#">忘记密码</a>-->
+						<!--</li>-->
+						<li><a href="#">账户信息</a>
 						</li>
-						<li><a href="#">My Account</a>
+						<li><a href="#">订单详情</a>
 						</li>
-						<li><a href="#">Address Books</a>
+
+						<li><a href="#">历史订单</a>
 						</li>
-						<li><a href="wishlist.html">Wish List</a>
+						<!--<li><a href="#">Downloads</a>-->
+						<!--</li>-->
+						<!--<li><a href="#">Reward Points</a>-->
+						<!--</li>-->
+						<li><a href="#">商品退货</a>
 						</li>
-						<li><a href="#">Order History</a>
-						</li>
-						<li><a href="#">Downloads</a>
-						</li>
-						<li><a href="#">Reward Points</a>
-						</li>
-						<li><a href="#">Returns</a>
-						</li>
-						<li><a href="#">Transactions</a>
-						</li>
-						<li><a href="#">Newsletter</a>
-						</li>
-						<li><a href="#">Recurring payments</a>
-						</li>
+                        <li><a href="wishlist.html">心愿单</a>
+                        </li>
+						<!--<li><a href="#">Transactions</a>-->
+						<!--</li>-->
+						<!--<li><a href="#">Newsletter</a>-->
+						<!--</li>-->
+						<!--<li><a href="#">Recurring payments</a>-->
+						<!--</li>-->
 					</ul>
 				</div>
 			</aside>
