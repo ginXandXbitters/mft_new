@@ -49,10 +49,6 @@ public class LoginController {
         user_pwd = loginMapper.compare_userPWD(request.getParameter("user_id"));
         receive_pwd=request.getParameter("user_pwd");
 
-//        System.out.println(admin_pwd);
-//        System.out.println(receive_pwd);
-//        测试输出
-
         if(user_pwd.equals(receive_pwd)){
             return "index_user";
         }
