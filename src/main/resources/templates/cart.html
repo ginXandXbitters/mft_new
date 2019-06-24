@@ -5,7 +5,7 @@
     
     <!-- Basic page needs
     ============================================ -->
-    <title>摸仙宝</title>
+    <title>SuperMarket - Multipurpose Responsive HTML5 Template</title>
     <meta charset="utf-8">
     <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
     <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
@@ -269,7 +269,7 @@
                         <!--//cart-->
 
                         <ul class="wishlist-comp hidden-md hidden-sm hidden-xs">
-                            <li class="index hidden-xs"><a href="index.html" class="top-link-index" title="主页"><i class="fa fa-refresh"></i></a>
+                            <li class="compare hidden-xs"><a href="compare.html" class="top-link-compare" title="商品比较"><i class="fa fa-refresh"></i></a>
                             </li>
                             <li class="wishlist hidden-xs"><a href="wishlist.html" id="wishlist-total" class="top-link-wishlist" title="心愿单"><i class="fa fa-heart"></i></a>
                             </li>
@@ -1061,26 +1061,26 @@
                      </td>
                     <td class="text-left">Pt 001</td>
                     <td class="text-left" width="200px"><div class="input-group btn-block quantity">
-                        <input type="text" name="quantity" value="1" size="1" class="form-control" />
+                        <input type="text" id="quantity1" name="quantity" value="1" size="1" class="form-control" />
                         <span class="input-group-btn">
-                        <button type="submit" data-toggle="tooltip" title="Update" class="btn btn-primary"><i class="fa fa-clone"></i></button>
-                        <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onClick=""><i class="fa fa-times-circle"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Update" class="btn btn-primary" onclick="good1()"><i class="fa fa-clone"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onclick="reset1()" ><i class="fa fa-times-circle"></i></button>
                         </span></div></td>
                     <td class="text-right">¥120.00</td>
-                    <td class="text-right">¥120.00</td>
+                    <td class="text-right" id="price1"></td>
                   </tr>
                   <tr>
                     <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/10.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
                     <td class="text-left"><a href="product.html">水钻鞋</a></td>
                     <td class="text-left">Pt 002</td>
                     <td class="text-left" width="200px"><div class="input-group btn-block quantity">
-                        <input type="text" name="quantity" value="1" size="1" class="form-control" />
+                        <input type="text" id="quantity2" name="quantity" value="1" size="1" class="form-control" />
                         <span class="input-group-btn">
-                        <button type="submit" data-toggle="tooltip" title="Update" class="btn btn-primary"><i class="fa fa-clone"></i></button>
-                        <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onClick=""><i class="fa fa-times-circle"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Update" class="btn btn-primary" onclick="good2()"><i class="fa fa-clone"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onClick="reset2()"><i class="fa fa-times-circle"></i></button>
                         </span></div></td>
                     <td class="text-right">¥150.00</td>
-                    <td class="text-right">¥150.00</td>
+                    <td class="text-right" id="price2"></td>
                   </tr>
                 </tbody>
               </table>
@@ -1167,49 +1167,10 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-8">
-				<table class="table table-bordered">
-					<tbody>
-						<tr>
-							<td class="text-right">
-								<strong>部分合计:</strong>
-							</td>
-							<td class="text-right">$168.71</td>
-						</tr>
-						<tr>
-							<td class="text-right">
-								<strong>统一运价:</strong>
-							</td>
-							<td class="text-right">$4.69</td>
-						</tr>
-<!--						<tr>
-							<td class="text-right">
-								<strong>Eco Tax (-2.00):</strong>
-							</td>
-							<td class="text-right">$5.62</td>
-						</tr>-->
-						<tr>
-							<td class="text-right">
-								<strong>增值税 (20%):</strong>
-							</td>
-							<td class="text-right">$34.68</td>
-						</tr>
-						<tr>
-							<td class="text-right">
-								<strong>总计:</strong>
-							</td>
-							<td class="text-right">$213.70</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
 
 		 <div class="buttons">
             <div class="pull-left"><a href="index.html" class="btn btn-primary">继续购物</a></div>
-            <div class="pull-right"><a href="checkout.html" class="btn btn-primary">结账</a></div>
+            <div class="pull-right"><a href="checkout.html" class="btn btn-primary">出单</a></div>
           </div>
         </div>
         <!--Middle Part End -->
@@ -1217,9 +1178,9 @@
 		</div>
 	</div>
 	<!-- //Main Container -->
+	
 
-
-        <!-- Footer Container -->
+	<!-- Footer Container -->
         <footer class="footer-container typefooter-1">
             <!-- Footer Top Container -->
 
@@ -1423,7 +1384,7 @@
             <!--Back To Top-->
             <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
         </footer>
-        <!-- //end Footer Container -->
+    <!-- //end Footer Container -->
 
     </div>
 	
@@ -1442,6 +1403,7 @@
 	<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
 	<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/self_js/shoppingcart.js"></script>
 	
 	
 	<!-- Theme files
