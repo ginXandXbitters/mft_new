@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.domain.Admin;
 import com.example.mapper.LoginMapper;
 import com.example.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +27,17 @@ public class LoginController {
         String admin_pwd;
         String receive_pwd;
 
+        //判断账号是否存在
+        if(loginMapper.ifexist_admin(request.getParameter("manager_id"))!=null){
+            admin_pwd = loginMapper.compare_adminPWD(request.getParameter("manager_id"));
+            receive_pwd=request.getParameter("manager_password");
 
-
-        admin_pwd = loginMapper.compare_adminPWD(request.getParameter("manager_id"));
-        receive_pwd=request.getParameter("manager_password");
-
-        if(admin_pwd.equals(receive_pwd)){
-            return "administrator";
+            if(admin_pwd.equals(receive_pwd)){
+                return "administrator";
+            }
+            else{
+                return "login";
+            }
         }
         else{
             return "login";
@@ -44,15 +49,22 @@ public class LoginController {
         String user_pwd;
         String receive_pwd;
 
-        user_pwd = loginMapper.compare_userPWD(request.getParameter("user_id"));
-        receive_pwd=request.getParameter("user_pwd");
+        //判断账号是否存在
+        if(loginMapper.ifexist_user(request.getParameter("user_id"))!=null){
+            user_pwd = loginMapper.compare_userPWD(request.getParameter("user_id"));
+            receive_pwd=request.getParameter("user_pwd");
 
-        if(user_pwd.equals(receive_pwd)){
-            return "index_user";
+            if(user_pwd.equals(receive_pwd)){
+                return "index_user";
+            }
+            else{
+                return "login";
+            }
         }
         else{
             return "login";
         }
+
     }
 
     @RequestMapping("/seller_homepage.html")
@@ -60,15 +72,22 @@ public class LoginController {
         String store_pwd;
         String receive_pwd;
 
-        store_pwd = loginMapper.compare_sellerPWD(request.getParameter("store_id"));
-        receive_pwd=request.getParameter("store_pwd");
+        //判断账号是否存在
+        if(loginMapper.ifexist_store(request.getParameter("store_id"))!=null){
+            store_pwd = loginMapper.compare_sellerPWD(request.getParameter("store_id"));
+            receive_pwd=request.getParameter("store_pwd");
 
-        if(store_pwd.equals(receive_pwd)){
-            return "seller_homepage";
+            if(store_pwd.equals(receive_pwd)){
+                return "seller_homepage";
+            }
+            else{
+                return "login";
+            }
         }
         else{
             return "login";
         }
+
     }
 
     @RequestMapping("/supplier.html")
@@ -76,14 +95,19 @@ public class LoginController {
         String supplier_pwd;
         String receive_pwd;
 
-        supplier_pwd = loginMapper.compare_supplierPWD(request.getParameter("supplier_id"));
-        receive_pwd=request.getParameter("supplier_pwd");
+        //判断账号是否存在
+        if(loginMapper.ifexist_supplier(request.getParameter("supplier_id"))!=null){
+            supplier_pwd = loginMapper.compare_supplierPWD(request.getParameter("supplier_id"));
+            receive_pwd=request.getParameter("supplier_pwd");
 
-        if(supplier_pwd.equals(receive_pwd)){
-            return "supplier";
+            if(supplier_pwd.equals(receive_pwd)){
+                return "supplier";
+            }
+            else{
+                return "login";
+            }
         }
         else{
-
             return "login";
         }
     }
