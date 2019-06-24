@@ -5,8 +5,10 @@ import com.example.domain.Suppliers;
 import com.example.domain.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface RegisterMapper {
     @Insert("insert into user(userID,userPw,userName,userTel,userMail,province,city,county,site,status) values(#{userID},#{userPw},#{userName},#{userTel},#{userMail},#{province},#{city},#{county},#{site},#{status})")
     public void insert_newuser(User user);
