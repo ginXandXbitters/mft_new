@@ -26,12 +26,10 @@ public class LoginController {
         String admin_pwd;
         String receive_pwd;
 
+
+
         admin_pwd = loginMapper.compare_adminPWD(request.getParameter("manager_id"));
         receive_pwd=request.getParameter("manager_password");
-
-//        System.out.println(admin_pwd);
-//        System.out.println(receive_pwd);
-//        测试输出
 
         if(admin_pwd.equals(receive_pwd)){
             return "administrator";
@@ -53,6 +51,39 @@ public class LoginController {
             return "index_user";
         }
         else{
+            return "login";
+        }
+    }
+
+    @RequestMapping("/seller_homepage.html")
+    public String store_login(HttpServletRequest request){
+        String store_pwd;
+        String receive_pwd;
+
+        store_pwd = loginMapper.compare_sellerPWD(request.getParameter("store_id"));
+        receive_pwd=request.getParameter("store_pwd");
+
+        if(store_pwd.equals(receive_pwd)){
+            return "seller_homepage";
+        }
+        else{
+            return "login";
+        }
+    }
+
+    @RequestMapping("/supplier.html")
+    public String supplier_login(HttpServletRequest request){
+        String supplier_pwd;
+        String receive_pwd;
+
+        supplier_pwd = loginMapper.compare_supplierPWD(request.getParameter("supplier_id"));
+        receive_pwd=request.getParameter("supplier_pwd");
+
+        if(supplier_pwd.equals(receive_pwd)){
+            return "supplier";
+        }
+        else{
+
             return "login";
         }
     }
