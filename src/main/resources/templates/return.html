@@ -269,7 +269,7 @@
                         <!--//cart-->
 
                         <ul class="wishlist-comp hidden-md hidden-sm hidden-xs">
-                            <li class="compare hidden-xs"><a href="compare.html" class="top-link-compare" title="商品比较"><i class="fa fa-refresh"></i></a>
+                            <li class="index hidden-xs"><a href="index.html" class="top-link-index" title="主页"><i class="fa fa-refresh"></i></a>
                             </li>
                             <li class="wishlist hidden-xs"><a href="wishlist.html" id="wishlist-total" class="top-link-wishlist" title="心愿单"><i class="fa fa-heart"></i></a>
                             </li>
@@ -1035,50 +1035,50 @@
 	<div class="main-container container">
 		<ul class="breadcrumb">
 			<li><a href="#"><i class="fa fa-home"></i></a></li>
-			<li><a href="#">Return</a></li>
+			<li><a href="#">退换货</a></li>
 		</ul>
 		
 		<div class="row">
 			<!--Middle Part Start-->
 			<div id="content" class="col-sm-9">
-				<h2 class="title">Product Returns</h2>
-				<p>Please complete the form below to request product returns.</p>
+				<h2 class="title">商品退换</h2>
+				<p>请写下你退换货的详细信息.</p>
 
 				<form class="form-horizontal">
 					<fieldset>
-						<legend>Order Information</legend>
+						<legend>订单信息</legend>
 						<div class="form-group required">
-							<label for="input-firstname" class="col-sm-2 control-label">First Name</label>
+							<label for="input-firstname" class="col-sm-2 control-label">姓名</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="input-firstname" placeholder="First Name" value="" name="firstname">
+								<input type="text" class="form-control" id="input-firstname" placeholder="Name" value="" name="firstname">
 							</div>
 						</div>
 						<div class="form-group required">
-							<label for="input-lastname" class="col-sm-2 control-label">Last Name</label>
+							<label for="input-lastname" class="col-sm-2 control-label">账户</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="input-lastname" placeholder="Last Name" value="" name="lastname">
+								<input type="text" class="form-control" id="input-lastname" placeholder="Account" value="" name="lastname">
 							</div>
 						</div>
 						<div class="form-group required">
-							<label for="input-email" class="col-sm-2 control-label">E-Mail</label>
+							<label for="input-email" class="col-sm-2 control-label">电子邮件</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="input-email" placeholder="E-Mail" value="" name="email">
 							</div>
 						</div>
 						<div class="form-group required">
-							<label for="input-telephone" class="col-sm-2 control-label">Telephone</label>
+							<label for="input-telephone" class="col-sm-2 control-label">手机</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="input-telephone" placeholder="Telephone" value="" name="telephone">
 							</div>
 						</div>
 						<div class="form-group required">
-							<label for="input-order-id" class="col-sm-2 control-label">Order ID</label>
+							<label for="input-order-id" class="col-sm-2 control-label">订单编号</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="input-order-id" placeholder="Order ID" value="" name="order_id">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="input-date-ordered" class="col-sm-2 control-label">Order Date</label>
+							<label for="input-date-ordered" class="col-sm-2 control-label">订单日期</label>
 							<div class="col-sm-3">
 								<div class="input-group date">
 									<input type="text" class="form-control" id="input-date-ordered" data-date-format="YYYY-MM-DD" placeholder="Order Date" value="" name="date_ordered"><span class="input-group-btn">
@@ -1089,71 +1089,71 @@
 						</div>
 					</fieldset>
 					<fieldset>
-						<legend>请输入用户信息</legend>
+						<legend>商品信息</legend>
 						<div class="form-group required">
-							<label for="input-product" class="col-sm-2 control-label">Product Name</label>
+							<label for="input-product" class="col-sm-2 control-label">商品名称</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="input-product" placeholder="Product Name" value="" name="product">
 							</div>
 						</div>
 						<div class="form-group required">
-							<label for="input-model" class="col-sm-2 control-label">Product Code</label>
+							<label for="input-model" class="col-sm-2 control-label">商品编号</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="input-model" placeholder="Product Code" value="" name="model">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="input-quantity" class="col-sm-2 control-label">Quantity</label>
+							<label for="input-quantity" class="col-sm-2 control-label">数量</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="input-quantity" placeholder="Quantity" value="1" name="quantity">
 							</div>
 						</div>
 						<div class="form-group required">
-							<label class="col-sm-2 control-label">Reason for Return</label>
+							<label class="col-sm-2 control-label">退换货原因</label>
 							<div class="col-sm-10">
 								<div class="radio">
 									<label>
-										<input type="radio" value="1" name="return_reason_id"> Dead On Arrival</label>
+										<input type="radio" value="1" name="return_reason_id"> 商品未送达</label>
 								</div>
 								<div class="radio">
 									<label>
-										<input type="radio" value="3" name="return_reason_id"> Order Error</label>
+										<input type="radio" value="3" name="return_reason_id"> 订单错误</label>
 								</div>
 								<div class="radio">
 									<label>
-										<input type="radio" value="2" name="return_reason_id"> Received Wrong Item</label>
+										<input type="radio" value="2" name="return_reason_id"> 收到错误的商品</label>
 								</div>
 								<div class="radio">
 									<label>
-										<input type="radio" value="5" name="return_reason_id"> Other
+										<input type="radio" value="5" name="return_reason_id"> 其他
 									</label>
 								</div>
 
 							</div>
 						</div>
 						<div class="form-group required">
-							<label class="col-sm-2 control-label">Product is opened</label>
+							<label class="col-sm-2 control-label">商品是否打开</label>
 							<div class="col-sm-10">
 								<label class="radio-inline">
-									<input type="radio" value="1" name="opened"> Yes
+									<input type="radio" value="1" name="opened"> 是
 								</label>
 								<label class="radio-inline">
-									<input type="radio" checked="checked" value="0" name="opened"> No
+									<input type="radio" checked="checked" value="0" name="opened"> 否
 								</label>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="input-comment" class="col-sm-2 control-label">Other details</label>
+							<label for="input-comment" class="col-sm-2 control-label">其他细节</label>
 							<div class="col-sm-10">
 								<textarea class="form-control" id="input-comment" placeholder="Other details" rows="10" name="comment"></textarea>
 							</div>
 						</div>
 					</fieldset>
 					<div class="buttons clearfix">
-						<div class="pull-left"><a class="btn btn-default buttonGray" href="default.htm">Back</a>
+						<div class="pull-left"><a class="btn btn-default buttonGray" href="default.htm">后退</a>
 						</div>
 						<div class="pull-right">
-							<input type="submit" class="btn btn-primary" value="Submit">
+							<input type="submit" class="btn btn-primary" value="提交">
 						</div>
 					</div>
 				</form>
@@ -1162,38 +1162,39 @@
 			</div>
 			<!--Middle Part End-->
 			<!--Right Part Start -->
-			<aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">
-				<h2 class="subtitle">Account</h2>
-<div class="list-group">
-	<ul class="list-item">
-		<li><a href="login.html">Login</a>
-		</li>
-		<li><a href="register.html">Register</a>
-		</li>
-		<li><a href="#">Forgotten Password</a>
-		</li>
-		<li><a href="#">My Account</a>
-		</li>
-		<li><a href="#">Address Books</a>
-		</li>
-		<li><a href="wishlist.html">Wish List</a>
-		</li>
-		<li><a href="#">Order History</a>
-		</li>
-		<li><a href="#">Downloads</a>
-		</li>
-		<li><a href="#">Reward Points</a>
-		</li>
-		<li><a href="#">Returns</a>
-		</li>
-		<li><a href="#">Transactions</a>
-		</li>
-		<li><a href="#">Newsletter</a>
-		</li>
-		<li><a href="#">Recurring payments</a>
-		</li>
-	</ul>
-</div>			</aside>
+            <aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">
+                <h2 class="subtitle">账户</h2>
+                <div class="list-group">
+                    <ul class="list-item">
+                        <li><a href="login.html">登录</a>
+                        </li>
+                        <li><a href="register.html">注册</a>
+                        </li>
+                        <li><a href="#">忘记密码</a>
+                        </li>
+                        <li><a href="#">我的账户</a>
+                        </li>
+                        <li><a href="#">通讯录</a>
+                        </li>
+                        <li><a href="wishlist.html">心愿单</a>
+                        </li>
+                        <li><a href="#">历史订单</a>
+                        </li>
+                        <li><a href="#">下载</a>
+                        </li>
+                        <li><a href="#">返还积分</a>
+                        </li>
+                        <li><a href="#">退换货</a>
+                        </li>
+                        <li><a href="#">交易</a>
+                        </li>
+                        <li><a href="#">简讯</a>
+                        </li>
+                        <li><a href="#">最近支付</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
 			<!--Right Part End -->
 		</div>
 	</div>
