@@ -1,0 +1,139 @@
+*{
+  	padding:0px;margin:0px;
+  	
+  }
+  strong
+  {
+  	font-size:12px;
+  }
+  #selctData_table
+        {
+            border-collapse:collapse;
+            width:100%;
+        }
+         #selctData_table tr
+         {
+             height:25px;
+         }
+
+          #selctData_table tr:nth-child(2n+1)
+         {
+             background:#F3F3F7;
+         }
+           #selctData_table tr:nth-child(2n)
+         {
+             background:#F8FDFF;
+         }
+          #selctData_table td
+         {
+             border:1px solid #FDCFCF;
+             text-align:center;
+             padding:4px 5px;
+         }
+          #selctData_table th
+         {
+            border: 1px solid #FDCFCF;
+            text-align: center;
+            background: #1DA2DE;
+            
+         }
+          #selctData_table th strong
+          {
+              color:#ffffff;
+              font-siez:12px;
+          }
+          #SelectDataCondition *
+          {  margin-top:6px;
+              display:block;
+              float:left;
+          }
+          #selctData_table a 
+          {
+              color:#031efb;
+          }
+    .Input_text
+    {
+    	height:24px;width:150px;
+    }
+    .Select_cbo
+    {
+    	width:100px;height:24px;
+    }
+    .Input_btn
+    {
+    	width:50px;height:25px;
+    }
+    .SelectOnwhere>div
+    {
+    float:left;
+    padding:3px 0px 3px
+    }
+      ._Layout 
+      {
+            float: right;
+            min-width: 315px;
+            max-width: 350px;
+        }
+
+        ._HomePage, ._PreviousPage, ._NextPage, ._TrailerPage {
+            width: 20px;
+            height: 20px;
+            background: url(/BooksManagementSystem/img/paging.gif) no-repeat;
+            border: none;
+            display: block;
+        }
+
+            ._HomePage:hover {
+                opacity: 0.7;
+                filter: alpha(opacity:70); /*filter: alpha(opacity:70)IE×¨ÊôÍ¸Ã÷¶È*/
+            }
+
+            ._PreviousPage:hover {
+                opacity: 0.7;
+                filter: alpha(opacity:70);
+            }
+
+            ._NextPage:hover {
+                opacity: 0.7;
+                filter: alpha(opacity:70);
+            }
+
+            ._TrailerPage:hover {
+                opacity: 0.7;
+                filter: alpha(opacity:70);
+            }
+
+        ._HomePage {
+            background-position: -7px -4px;
+        }
+
+        ._PreviousPage {
+            background-position: -33px -4px;
+        }
+
+        ._NextPage {
+            background-position: -62px -4px;
+        }
+
+        ._TrailerPage {
+            background-position: -88px -4px;
+        }
+
+        ._Skip {
+            height: 20px;
+            width: 30px;
+            border: none;
+            background: #f4f4f4;
+            border: #95b8e7 solid 1px;
+        }
+
+        ._PageSize {
+            border: none;
+            background: #f4f4f4;
+            border: #95b8e7 solid 1px;
+        }
+
+        ._Totals
+         {
+            color: #00F;
+        }

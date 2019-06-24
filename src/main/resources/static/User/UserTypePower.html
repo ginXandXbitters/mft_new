@@ -1,0 +1,84 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<c:set  value="${pageContext.request.contextPath}" scope="page" var="ctx"></c:set>-->
+<!DOCTYPE>
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>模块权限</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+
+	<script type="text/javascript" src="${ctx}/js/jquery-1.10.2.js"></script>
+	<link rel="stylesheet" href="${ctx}/css/table.css" type="text/css"></link>
+	<link rel="stylesheet" href="${ctx}/css/All.css" type="text/css"></link>	
+	<link href="${ctx}/Scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet" /><!--bootstrap css样式-->
+	<script src="${ctx}/Scripts/bootstrap/js/bootstrap.min.js"></script>
+	
+	
+	<link href="${ctx}/Scripts/zTree/zTreeStyle/zTreeStyle.css" rel="stylesheet" /><!--树形css样式-->
+    <script src="${ctx}/Scripts/zTree/jquery/jquery.ztree.core.js"></script><!--树形js代码-->
+    <script src="${ctx}/Scripts/zTree/jquery/jquery.ztree.excheck.js"></script><!--树形js复选框代码-->
+    <script src="${ctx}/Scripts/zTree/jquery/jquery.ztree.exhide.js"></script><!--树形js隐藏-->
+	
+	<script src="${ctx}/css/layer/layer.js"></script>
+	
+	<script type="text/javascript" src="${ctx}/js/User/UserTypePower.js"></script>
+	
+	<script type="text/javascript" src="${ctx}/js/ErroShow.js"></script>
+
+  </head>
+  
+  <body style="min-width:530px;    overflow: hidden;">
+    <table>
+	  	<tr>
+	  		<td>
+	  			 <div style="width:230px;height:100%;overflow: auto;">
+	  			 	 <span class="label label-info" style="display: block;font-size: 15; padding: 7px;">用户类型</span>
+	   			      <ul id="SystemType" class="ztree" ></ul>
+	   			 </div>
+	  		</td>
+	  		<td>
+	  			<div style="width:300px;height:100%;overflow: auto;">
+	  							<ol class="breadcrumb">
+								    <li><a href="javascript:" id="TitleSys">计费管理子平台</a></li>
+								    <li><a href="javascript:" id="TitleType">超级管理员</a></li>
+								</ol>
+					<div id="UserTypePower"  style="display:none">
+	   			      <ul id="ModulPower" class="ztree">
+	   			      </ul>
+	   			      <div style="width:80px;height:1px;margin:auto;padding-top:10px">
+	   			      		 <input id="usertypeId" type="hidden"/>
+							 <button type="button" class="btn btn-warning" id="BtnInsertPower">保存</button>
+					  </div>
+	   			    </div>  
+	   			     <div id="InsertUserType" >
+	   			      <div class="input-group">
+							   <span class="input-group-addon"> &ensp; 用户类型   &ensp;</span>
+							  <input type="text" class="form-control" placeholder="" id="usertype">
+					  </div>
+	   			      <div style="width:80px;height:20px;margin:auto;padding-top:10px">
+							 <button type="button" class="btn btn-warning" id="BtnInsertType">添加</button>
+					  </div>
+					</div>
+					
+	   			 </div>
+	  		</td>
+	  	</tr>
+  	</table>
+  </body>
+</html>
