@@ -11,6 +11,6 @@ public interface UserMapper {
     @Select("select * from user")
        public List<User> queryUserList();
 
-    @Select("select userName from user where userID=#{forsure_id}")
+    @Select("select userPw from user where userID=#{forsure_id}")
     public String queryUsername(String forsure_id);
 }
