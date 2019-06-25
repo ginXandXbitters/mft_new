@@ -1,8 +1,8 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    
     <!-- Basic page needs
     ============================================ -->
     <title>摸仙宝</title>
@@ -11,16 +11,16 @@
     <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
     <meta name="author" content="Magentech">
     <meta name="robots" content="index, follow" />
-
+   
     <!-- Mobile specific metas
     ============================================ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    
     <!-- Favicon
     ============================================ -->
     <link rel="shortcut icon" type="image/png" href="ico/favicon-16x16.png"/>
-
-
+  
+   
     <!-- Libs CSS
     ============================================ -->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
@@ -30,7 +30,7 @@
     <link href="css/themecss/lib.css" rel="stylesheet">
     <link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
     <link href="js/minicolors/miniColors.css" rel="stylesheet">
-
+    
     <!-- Theme CSS
     ============================================ -->
     <link href="css/themecss/so_searchpro.css" rel="stylesheet">
@@ -42,21 +42,21 @@
 
     <link href="css/footer/footer1.css" rel="stylesheet">
     <link href="css/header/header1.css" rel="stylesheet">
-    <link id="color_scheme" href="css/theme.css" rel="stylesheet">
+    <link id="color_scheme" href="css/theme.css" rel="stylesheet"> 
     <link href="css/responsive.css" rel="stylesheet">
 
-    <!-- Google web fonts
-   ============================================ -->
-    <link href='../../../../../https@fonts.googleapis.com/css@family=Poppins_3A300,400,500,600,700' rel='stylesheet' type='text/css'>
+     <!-- Google web fonts
+    ============================================ -->
+    <link href='../../../../../https@fonts.googleapis.com/css@family=Poppins_3A300,400,500,600,700' rel='stylesheet' type='text/css'>     
     <style type="text/css">
-        body{font-family:'Poppins', sans-serif;}
+         body{font-family:'Poppins', sans-serif;}
     </style>
 
 </head>
 
 <body class="res layout-1">
 
-<div id="wrapper" class="wrapper-fluid banners-effect-5">
+    <div id="wrapper" class="wrapper-fluid banners-effect-5">
 
 
     <!-- Header Container  -->
@@ -271,7 +271,7 @@
                         <ul class="wishlist-comp hidden-md hidden-sm hidden-xs">
                             <li class="index hidden-xs"><a href="index.html" class="top-link-index" title="主页"><i class="fa fa-refresh"></i></a>
                             </li>
-                            <li class="wishlist hidden-xs"><a href="#" id="wishlist-total" class="top-link-wishlist" title="Wish List (0) "><i class="fa fa-heart"></i></a>
+                            <li class="wishlist hidden-xs"><a href="wishlist.html" id="wishlist-total" class="top-link-wishlist" title="心愿单"><i class="fa fa-heart"></i></a>
                             </li>
                         </ul>
 
@@ -983,372 +983,365 @@
         </div>
     </header>
     <!-- //Header Container  -->
+    
+	<!-- Main Container  -->
+	<div class="main-container container">
+		<ul class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i></a></li>
+			<li><a href="#">供应商订单</a></li>
+		</ul>
 
-
-    <!-- Main Container  -->
-    <div class="main-container container" style="height:600px">
-        <h2 class="title">欢迎管理员登录[<a href="login.html">退出</a>]</h2>
-        <aside class="col-sm-4 col-md-3 content-aside" id="column-left">
-            <div class="module category-style">
-                <h3 class="modtitle">管理员操作</h3>
-                <div class="modcontent">
-                    <div class="box-category">
-                        <ul id="cat_accordion" class="list-group">
-                            <li class="hadchild"><a href="#" class="cutom-parent">用户管理</a>   <span class="button-view  fa fa-plus-square-o"></span>
-                                <ul style="display: block;">
-                                    <li><a href="user-information.html">用户信息管理</a></li>
-                                    <li><a href="#">角色管理</a></li>
-                                    <li><a href="administrator.html">权限管理</a></li>
-                                    <li><a href="#">黑名单</a></li>
-                                </ul>
-                            </li>
-                            <li class="hadchild"><a class="cutom-parent" href="#">报表管理</a>   <span class="button-view  fa fa-plus-square-o"></span>
-                                <ul style="display: none;">
-                                    <li><a href="#">用户注册统计</a></li>
-                                    <li><a href="#">低库存汇总</a></li>
-                                    <li><a href="#">缺货订单</a></li>
-                                    <li><a href="statistics.html">订单汇总</a></li>
-                                    <li><a href="#">退换货</a></li>
-                                </ul>
-                            </li>
-                            <li class="hadchild"><a href="#" class="cutom-parent">系统管理</a>   <span class="button-view  fa fa-plus-square-o"></span>
-                                <ul style="display: none;">
-                                    <li><a href="#">安全管理</a></li>
-                                    <li><a href="#">系统属性</a></li>
-                                    <li><a href="#">支付管理</a></li>
-                                    <li><a href="#">数据导入管理</a></li>
-                                </ul>
-                            </li>
-                            <li class="hadchild"><a href="#" class="cutom-parent">订单管理</a>  <span class="button-view  fa fa-plus-square-o"></span>
-                                <ul style="display: none;">
-                                    <li><a href="order-query.html">订单查询</a></li>
-                                    <li><a href="#">异常订单处理</a></li>
-                                    <li><a href="#">投诉订单处理</a></li>
-                                    <li><a href="#">结算</a></li>
-                                </ul>
-                            </li>
-                            <li class=""><a href="#" class="cutom-parent">促销管理</a>  <span class="dcjq-icon"></span></li>
-                            <li class=""><a href="#" class="cutom-parent">推荐管理</a>    <span class="dcjq-icon"></span></li>
-                            <li class=""><a href="#" class="cutom-parent">内容管理</a>  <span class="dcjq-icon"></span></li>
-                            <li class=""><a href="#" class="cutom-parent">广告管理</a><span class="dcjq-icon"></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <div class="right1"style="float:left ; width:60%; height:100%;">
-            <fieldset>
-                <legend>订单查询</legend>
-                <div class="form-group required">
-                    <label for="input-product" class="col-sm-2 control-label"><strong>用户ID</strong></label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" id="input-product" placeholder="用户ID" value="" name="product">
-                    </div>
-                </div>
-                <br/><br/>
-                <label for="input-product" class="col-sm-2 control-label"><strong>订单号</strong></label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" id="input-orderno" placeholder="订单号" value="" name="product">
-                </div>
-                <br/><br/>
-                <div class="col-sm-10">
-                    <textarea class="form-control" id="input-comment" placeholder="如果遗忘订单号，请输入订单日期、商品特点等其他限定条件" rows="5" name="comment"></textarea>
-                </div>
-            </fieldset>
-            <br/>
-            <div class="align-center">
-                <input type="submit" class="btn btn-primary" value="提交">
-            </div>
-            <div id="content" class="col-sm-13">
-                <h4 class="title">查询结果(示例)</h4>
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
+        <div class="row">
+            <!--Middle Part Start-->
+            <div id="content" class="col-sm-12">
+                <h2 class="title">供应商待处理订单</h2>
+                <div class="table-responsive form-group">
+                    <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <td class="text-center">物品</td>
+                            <td class="text-center">图片</td>
                             <td class="text-center">商品名</td>
-                            <td class="text-center">订单号</td>
+                            <td class="text-center">型号</td>
                             <td class="text-center">数量</td>
-                            <td class="text-center">配送状态</td>
-                            <td class="text-center">购买日期</td>
-                            <td class="text-center">总金额</td>
-                            <td class="text-center">查看详情</td>
+                            <td class="text-center">单价</td>
+                            <td class="text-center">总价</td>
+                            <td class="text-center">处理</td>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/8.jpg" alt="Aspire Ultrabook Laptop" title="Aspire Ultrabook Laptop" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br />红鞋</a></td>
+                            <td class="text-center"><br />Pt 001</td>
+                            <td class="text-center"><br />1</td>
+                            <td class="text-center"><br/>¥120.00</td>
+                            <td class="text-center"><br/>¥120.00</td>
                             <td class="text-center">
-                                <a href="product.html"><img width="85" class="img-thumbnail" title="Aspire Ultrabook Laptop" alt="Aspire Ultrabook Laptop" src="image/catalog/demo/product/fashion/1.jpg">
-                                </a>
-                            </td>
-                            <td class="text-center"><a href="product.html">秋季必备女式橄榄绿衬衣</a>
-                            </td>
-                            <td class="text-center">100010001001</td>
-                            <td class="text-center">1</td>
-                            <td class="text-center">运送中</td>
-                            <td class="text-center">2019.6.18</td>
-                            <td class="text-center">￥80</td>
-                            <td class="text-center"><a class="btn btn-info" title="" data-toggle="tooltip" href="order-information.html" data-original-title="View"><i class="fa fa-eye"></i></a>
-                            </td>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/10.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>水钻鞋</a></td>
+                            <td class="text-center"><br />Pt 002</td>
+                            <td class="text-center"><br />1</td>
+                            <td class="text-center"><br/>¥220.00</td>
+                            <td class="text-center"><br/>¥220.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/9.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>黑色高跟鞋</a></td>
+                            <td class="text-center"><br />Pt 003</td>
+                            <td class="text-center"><br />2</td>
+                            <td class="text-center"><br/>¥160.00</td>
+                            <td class="text-center"><br/>¥320.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/7.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>褐色手提包</a></td>
+                            <td class="text-center"><br/>Pt 004</td>
+                            <td class="text-center"><br />2</td>
+                            <td class="text-center"><br/>¥350.00</td>
+                            <td class="text-center"><br/>¥700.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/6.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>黑色手提包</a></td>
+                            <td class="text-center"><br/>Pt 005</td>
+                            <td class="text-center"><br />4</td>
+                            <td class="text-center"><br/>¥150.00</td>
+                            <td class="text-center"><br/>¥600.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/5.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>双肩包</a></td>
+                            <td class="text-center"><br/>Pt 006</td>
+                            <td class="text-center"><br />3</td>
+                            <td class="text-center"><br/>¥130.00</td>
+                            <td class="text-center"><br/>¥390.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
                         </tr>
                         </tbody>
                     </table>
                 </div>
+                <!--Middle Part End -->
+
             </div>
         </div>
-    </div>
-</div>
+	</div>
+	<!-- //Main Container -->
+	
 
-<!-- //Main Container -->
+	<!-- Footer Container -->
+        <footer class="footer-container typefooter-1">
+            <!-- Footer Top Container -->
 
-<!-- Footer Container -->
-<footer class="footer-container typefooter-1">
-    <!-- Footer Top Container -->
-
-    <div class="container">
-        <div class="row footer-top">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="socials-w">
-                    <h2>社交平台</h2>
-                    <ul class="socials">
-                        <li class="facebook"><a href="../../../../../https@www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                        <li class="twitter"><a href="../../../../../https@twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                        <li class="google_plus"><a href="../../../../../https@plus.google.com/u/0/+Smartaddons/posts" target="_blank"><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
-                        <li class="pinterest"><a href="../../../../../https@www.pinterest.com/smartaddons/default.htm" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
-                        <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a></li>
-                        <li class="linkedin"><a href="#" target="_blank"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
-                        <li class="skype"><a href="#" target="_blank"><i class="fa fa-skype"></i><span>skype</span></a></li>
-                    </ul>
-                </div>
-
+            <div class="container">
+                <div class="row footer-top">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="socials-w">
+                            <h2>社交平台</h2>
+                            <ul class="socials">
+                                <li class="facebook"><a href="../../../../../https@www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                <li class="twitter"><a href="../../../../../https@twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                <li class="google_plus"><a href="../../../../../https@plus.google.com/u/0/+Smartaddons/posts" target="_blank"><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
+                                <li class="pinterest"><a href="../../../../../https@www.pinterest.com/smartaddons/default.htm" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
+                                <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a></li>
+                                <li class="linkedin"><a href="#" target="_blank"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
+                                <li class="skype"><a href="#" target="_blank"><i class="fa fa-skype"></i><span>skype</span></a></li>
+                            </ul>
+                        </div>
 
 
 
 
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="module newsletter-footer1">
-                    <div class="newsletter">
 
-                        <div class="title-block">
-                            <div class="page-heading font-title">
-                                接收推送邮箱
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="module newsletter-footer1">
+                            <div class="newsletter">
+
+                                <div class="title-block">
+                                    <div class="page-heading font-title">
+                                        接收推送邮箱
+                                    </div>
+
+                                </div>
+
+                                <div class="block_content">
+                                    <form method="post" id="signup" name="signup" class="form-group form-inline signup send-mail">
+                                        <div class="form-group">
+                                            <div class="input-box">
+                                                <input type="email" placeholder="您的邮箱地址：" value="" class="form-control" id="txtemail" name="txtemail" size="55">
+                                            </div>
+                                            <div class="subcribe">
+                                                <button class="btn btn-primary btn-default font-title" type="submit" onclick="return subscribe_newsletter();" name="submit">
+                                                    订阅
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                                <!--/.modcontent-->
+
                             </div>
 
                         </div>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="block_content">
-                            <form method="post" id="signup" name="signup" class="form-group form-inline signup send-mail">
-                                <div class="form-group">
-                                    <div class="input-box">
-                                        <input type="email" placeholder="您的邮箱地址：" value="" class="form-control" id="txtemail" name="txtemail" size="55">
-                                    </div>
-                                    <div class="subcribe">
-                                        <button class="btn btn-primary btn-default font-title" type="submit" onclick="return subscribe_newsletter();" name="submit">
-                                            订阅
-                                        </button>
+            <!-- /Footer Top Container -->
+
+            <div class="footer-middle ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-infos">
+                            <div class="infos-footer">
+                                <a href="#"><img src="image/catalog/logo-footer.png" alt="image"></a>
+                                <ul class="menu">
+                                    <li class="adres">
+                                        中国 上海市 奉贤区 海湾镇海思路999号
+                                    </li>
+                                    <li class="phone">
+                                        (+021)64833123
+                                    </li>
+                                    <li class="mail">
+                                        <a href="mailto:ocean98@126.com">ocean98@126.com</a>
+                                    </li>
+                                    <li class="time">
+                                        Open time: 8:00AM - 6:00PM
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-information box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">信息</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">关于我们</a></li>
+                                            <li><a href="#">常见问题</a></li>
+                                            <li><a href="#">保修和服务</a></li>
+                                            <li><a href="#">全天候支持</a></li>
+                                            <li><a href="#">产品注册</a></li>
+                                            <li><a href="#">产品支持</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </form>
-
+                            </div>
 
                         </div>
-                        <!--/.modcontent-->
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-account box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">我的账户</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">品牌</a></li>
+                                            <li><a href="#">礼券</a></li>
+                                            <li><a href="#">关联公司</a></li>
+                                            <li><a href="#">特价</a></li>
+                                            <li><a href="#">常见问题解答</a></li>
+                                            <li><a href="#">自定义链接</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-clear">
+                            <div class="box-service box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">分类</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">活动和排队用品</a></li>
+                                            <li><a href="#">家具装修</a></li>
+                                            <li><a href="#">灯具</a></li>
+                                            <li><a href="#">厨房和浴室装置</a></li>
+                                            <li><a href="#">客户服务</a></li>
+                                            <li><a href="#">厨房和餐厅</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-service box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">服务</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">联系我们</a></li>
+                                            <li><a href="#">反馈</a></li>
+                                            <li><a href="#">支持</a></li>
+                                            <li><a href="#">网站地图</a></li>
+                                            <li><a href="#">客户服务</a></li>
+                                            <li><a href="#">自定义链接</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-service box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">合作伙伴</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">阿里巴巴集团</a></li>
+                                            <li><a href="#">支付宝</a></li>
+                                            <li><a href="#">飞猪</a></li>
+                                            <li><a href="#">优酷</a></li>
+                                            <li><a href="#">支付宝</a></li>
+                                            <li><a href="#">全球通卖通</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
 
                     </div>
-
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- /Footer Top Container -->
-
-    <div class="footer-middle ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-infos">
-                    <div class="infos-footer">
-                        <a href="#"><img src="image/catalog/logo-footer.png" alt="image"></a>
-                        <ul class="menu">
-                            <li class="adres">
-                                中国 上海市 奉贤区 海湾镇海思路999号
-                            </li>
-                            <li class="phone">
-                                (+021)64833123
-                            </li>
-                            <li class="mail">
-                                <a href="mailto:ocean98@126.com">ocean98@126.com</a>
-                            </li>
-                            <li class="time">
-                                Open time: 8:00AM - 6:00PM
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                    <div class="box-information box-footer">
-                        <div class="module clearfix">
-                            <h3 class="modtitle">信息</h3>
-                            <div class="modcontent">
-                                <ul class="menu">
-                                    <li><a href="#">关于我们</a></li>
-                                    <li><a href="#">常见问题</a></li>
-                                    <li><a href="#">保修和服务</a></li>
-                                    <li><a href="#">全天候支持</a></li>
-                                    <li><a href="#">产品注册</a></li>
-                                    <li><a href="#">产品支持</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                    <div class="box-account box-footer">
-                        <div class="module clearfix">
-                            <h3 class="modtitle">我的账户</h3>
-                            <div class="modcontent">
-                                <ul class="menu">
-                                    <li><a href="#">品牌</a></li>
-                                    <li><a href="#">礼券</a></li>
-                                    <li><a href="#">关联公司</a></li>
-                                    <li><a href="#">特价</a></li>
-                                    <li><a href="#">常见问题解答</a></li>
-                                    <li><a href="#">自定义链接</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-clear">
-                    <div class="box-service box-footer">
-                        <div class="module clearfix">
-                            <h3 class="modtitle">分类</h3>
-                            <div class="modcontent">
-                                <ul class="menu">
-                                    <li><a href="#">活动和排队用品</a></li>
-                                    <li><a href="#">家具装修</a></li>
-                                    <li><a href="#">灯具</a></li>
-                                    <li><a href="#">厨房和浴室装置</a></li>
-                                    <li><a href="#">客户服务</a></li>
-                                    <li><a href="#">厨房和餐厅</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                    <div class="box-service box-footer">
-                        <div class="module clearfix">
-                            <h3 class="modtitle">服务</h3>
-                            <div class="modcontent">
-                                <ul class="menu">
-                                    <li><a href="#">联系我们</a></li>
-                                    <li><a href="#">反馈</a></li>
-                                    <li><a href="#">支持</a></li>
-                                    <li><a href="#">网站地图</a></li>
-                                    <li><a href="#">客户服务</a></li>
-                                    <li><a href="#">自定义链接</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                    <div class="box-service box-footer">
-                        <div class="module clearfix">
-                            <h3 class="modtitle">合作伙伴</h3>
-                            <div class="modcontent">
-                                <ul class="menu">
-                                    <li><a href="#">阿里巴巴集团</a></li>
-                                    <li><a href="#">支付宝</a></li>
-                                    <li><a href="#">飞猪</a></li>
-                                    <li><a href="#">优酷</a></li>
-                                    <li><a href="#">支付宝</a></li>
-                                    <li><a href="#">全球通卖通</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="footer-b">
-                <div class="bottom-cont">
-                    <a href="#"><img src="image/catalog/demo/payment/pay1.jpg" alt="image"></a>
-                    <ul class="footer-links">
-                        <li><a href="#">关于我们</a></li>
-                        <li><a href="#">客户服务</a></li>
-                        <li><a href="#">私人政策</a></li>
-                        <li><a href="#">网站地图</a></li>
-                        <li><a href="#">订单和反馈</a></li>
-                        <li><a href="#">联系我们</a></li>
-                    </ul>
-                    <p>© 2018-现在 Moianbao.com 版权所有</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer Bottom Container -->
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="col-lg-12 col-xs-12 payment-w">
-                <img src="image/catalog/demo/payment/payment.png" alt="imgpayment">
-            </div>
-        </div>
-        <div class="copyright-w">
             <div class="container">
-                <div class="copyright">
-                    SuperMarket © 2018 Demo Store. All Rights Reserved. Designed by <a href="../../../../../www.bootstrapmb.com/default.htm" target="_blank">OpenCartWorks.Com</a>
+                <div class="row">
+                    <div class="footer-b">
+                        <div class="bottom-cont">
+                            <a href="#"><img src="image/catalog/demo/payment/pay1.jpg" alt="image"></a>
+                            <ul class="footer-links">
+                                <li><a href="#">关于我们</a></li>
+                                <li><a href="#">客户服务</a></li>
+                                <li><a href="#">私人政策</a></li>
+                                <li><a href="#">网站地图</a></li>
+                                <li><a href="#">订单和反馈</a></li>
+                                <li><a href="#">联系我们</a></li>
+                            </ul>
+                            <p>© 2018-现在 Moianbao.com 版权所有</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- /Footer Bottom Container -->
+
+
+            <!--Back To Top-->
+            <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
+        </footer>
+    <!-- //end Footer Container -->
+
     </div>
-    <!-- /Footer Bottom Container -->
-
-
-    <!--Back To Top-->
-    <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
-</footer>
-<!-- //end Footer Container -->
-
-</div>
-
-
+	
+	
 <!-- Include Libs & Plugins
 	============================================ -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
 <script type="text/javascript" src="js/slick-slider/slick.js"></script>
-<script type="text/javascript" src="js/themejs/libs.js"></script>
-<script type="text/javascript" src="js/unveil/jquery.unveil.js"></script>
-<script type="text/javascript" src="js/countdown/jquery.countdown.min.js"></script>
-<script type="text/javascript" src="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
-<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
-<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-
-
-<!-- Theme files
-============================================ -->
-
-
-<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
-<script type="text/javascript" src="js/themejs/addtocart.js"></script>
-<script type="text/javascript" src="js/themejs/application.js"></script>
-
-
+	<script type="text/javascript" src="js/themejs/libs.js"></script>
+	<script type="text/javascript" src="js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/self_js/shoppingcart.js"></script>
+	
+	
+	<!-- Theme files
+	============================================ -->
+	
+	
+	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
+	<script type="text/javascript" src="js/themejs/addtocart.js"></script>
+	<script type="text/javascript" src="js/themejs/application.js"></script>
+		
 </body>
 </html>
