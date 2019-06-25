@@ -22,6 +22,7 @@ public class MapperController {
 
     @RequestMapping("/index.html")
     public String homepage_index(){
+
         return "index";
     }
 
