@@ -1033,7 +1033,7 @@
 
 
     <!-- Main Container  -->
-    <div class="main-container container" style="height:600px">
+    <div class="main-container container" style="height:850px">
                         <h2 class="title">欢迎管理员登录[<a href="login.html">退出</a>]</h2>
                         <aside class="col-sm-4 col-md-3 content-aside" id="column-left">
                             <div class="module category-style">
@@ -1086,65 +1086,100 @@
                             </div>
                         </aside>
                         <div class="right1"style="float:left ; width:60%; height:100%;">
-                            <fieldset>
+                            <div><fieldset>
                                 <legend>用户信息管理</legend>
                                 <div class="form-group required">
                                     <label for="input-product" class="col-sm-2 control-label">请输入用户ID</label>
                                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="input-userID" placeholder="用户ID" value="" name="product">
-                    </div>
+                               </div>
                                     <div class="pull-right">
                                         <input type="submit" class="btn btn-primary" value="查询">
                                     </div>
-                </div>
+                               </div>
                             </fieldset>
-                            <br>
+                                <br/><br/>
+                                <fieldset>
+                                   <legend>查询结果</legend>
+                                <div class="form-group">
+                                    <label for="input-product" class="col-sm-2 control-label">用户名称</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="userID" placeholder="" value="" name="product" readonly="true">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-product" class="col-sm-2 control-label">E-mail</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="email" placeholder="" value="" name="product" readonly="true">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="input-company">省/直辖市</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="company" value=""  id="province" class="form-control" readonly="true">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="input-address-1">市/直辖市</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="address_1" value=""  id="city" class="form-control" readonly="true">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="input-address-2">区县</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="address_2" value="" id="county" class="form-control" readonly="true">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="input-postcode">详细地址</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="postcode" value=""  id="detail" class="form-control" readonly="true">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/><br/>
                             <fieldset>
-                                <legend>用户详细信息</legend>
-                                <div class="form-group required">
+                                <legend>修改用户信息</legend>
+                                <div class="form-group">
                                     <label for="input-product" class="col-sm-2 control-label">用户名称</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="input-product" placeholder="" value="" name="product">
                                     </div>
                                 </div>
-                                <br>
-                                <div class="form-group required">
+                                <div class="form-group">
                                     <label for="input-product" class="col-sm-2 control-label">E-mail</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="input-product1" placeholder="" value="" name="product">
                                     </div>
                                 </div>
-                                <br>
-                                    <div class="form-group required">
+                                    <div class="form-group">
                                         <label class="col-sm-2 control-label" for="input-company">省/直辖市</label>
                                         <div class="col-sm-10">
                                             <input type="text" name="company" value=""  id="input-company" class="form-control">
                                         </div>
                                     </div>
-                                <br>
-                                    <div class="form-group required">
+                                    <div class="form-group">
                                         <label class="col-sm-2 control-label" for="input-address-1">市/直辖市</label>
                                         <div class="col-sm-10">
                                             <input type="text" name="address_1" value=""  id="input-address-1" class="form-control">
                                         </div>
                                     </div>
-                                <br>
-                                    <div class="form-group required">
+                                    <div class="form-group">
                                         <label class="col-sm-2 control-label" for="input-address-2">区县</label>
                                         <div class="col-sm-10">
                                             <input type="text" name="address_2" value="" id="input-address-2" class="form-control">
                                         </div>
                                     </div>
-                                <br>
-                                    <div class="form-group required">
+                                    <div class="form-group">
                                         <label class="col-sm-2 control-label" for="input-postcode">详细地址</label>
                                         <div class="col-sm-10">
                                             <input type="text" name="postcode" value=""  id="input-postcode" class="form-control">
                                         </div>
                                     </div>
                             </fieldset>
-                            <br>
-                            <div class="pull-right">
+                            <br/>
+                            <div class="align-center">
                                 <input type="submit" class="btn btn-primary" value="修改为当前值">
                             </div>
             </div>
@@ -1153,228 +1188,228 @@
 
     <!-- //Main Container -->
 
-    <!-- Footer Container -->
-    <footer class="footer-container typefooter-1">
-        <!-- Footer Top Container -->
+<!-- Footer Container -->
+<footer class="footer-container typefooter-1">
+    <!-- Footer Top Container -->
 
-        <div class="container">
-            <div class="row footer-top">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="socials-w">
-                        <h2>社交平台</h2>
-                        <ul class="socials">
-                            <li class="facebook"><a href="../../../../../https@www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                            <li class="twitter"><a href="../../../../../https@twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                            <li class="google_plus"><a href="../../../../../https@plus.google.com/u/0/+Smartaddons/posts" target="_blank"><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
-                            <li class="pinterest"><a href="../../../../../https@www.pinterest.com/smartaddons/default.htm" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
-                            <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a></li>
-                            <li class="linkedin"><a href="#" target="_blank"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
-                            <li class="skype"><a href="#" target="_blank"><i class="fa fa-skype"></i><span>skype</span></a></li>
-                        </ul>
-                    </div>
-
-
-
-
-
+    <div class="container">
+        <div class="row footer-top">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="socials-w">
+                    <h2>社交平台</h2>
+                    <ul class="socials">
+                        <li class="facebook"><a href="../../../../../https@www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                        <li class="twitter"><a href="../../../../../https@twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                        <li class="google_plus"><a href="../../../../../https@plus.google.com/u/0/+Smartaddons/posts" target="_blank"><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
+                        <li class="pinterest"><a href="../../../../../https@www.pinterest.com/smartaddons/default.htm" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
+                        <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a></li>
+                        <li class="linkedin"><a href="#" target="_blank"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
+                        <li class="skype"><a href="#" target="_blank"><i class="fa fa-skype"></i><span>skype</span></a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="module newsletter-footer1">
-                        <div class="newsletter">
 
-                            <div class="title-block">
-                                <div class="page-heading font-title">
-                                    接收推送邮箱
-                                </div>
 
+
+
+
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="module newsletter-footer1">
+                    <div class="newsletter">
+
+                        <div class="title-block">
+                            <div class="page-heading font-title">
+                                接收推送邮箱
                             </div>
 
-                            <div class="block_content">
-                                <form method="post" id="signup" name="signup" class="form-group form-inline signup send-mail">
-                                    <div class="form-group">
-                                        <div class="input-box">
-                                            <input type="email" placeholder="您的邮箱地址：" value="" class="form-control" id="txtemail" name="txtemail" size="55">
-                                        </div>
-                                        <div class="subcribe">
-                                            <button class="btn btn-primary btn-default font-title" type="submit" onclick="return subscribe_newsletter();" name="submit">
-                                                订阅
-                                            </button>
-                                        </div>
+                        </div>
+
+                        <div class="block_content">
+                            <form method="post" id="signup" name="signup" class="form-group form-inline signup send-mail">
+                                <div class="form-group">
+                                    <div class="input-box">
+                                        <input type="email" placeholder="您的邮箱地址：" value="" class="form-control" id="txtemail" name="txtemail" size="55">
                                     </div>
-                                </form>
-
-
-                            </div>
-                            <!--/.modcontent-->
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /Footer Top Container -->
-
-        <div class="footer-middle ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-infos">
-                        <div class="infos-footer">
-                            <a href="#"><img src="image/catalog/logo-footer.png" alt="image"></a>
-                            <ul class="menu">
-                                <li class="adres">
-                                    中国 上海市 奉贤区 海湾镇海思路999号
-                                </li>
-                                <li class="phone">
-                                    (+021)64833123
-                                </li>
-                                <li class="mail">
-                                    <a href="mailto:ocean98@126.com">ocean98@126.com</a>
-                                </li>
-                                <li class="time">
-                                    Open time: 8:00AM - 6:00PM
-                                </li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                        <div class="box-information box-footer">
-                            <div class="module clearfix">
-                                <h3 class="modtitle">信息</h3>
-                                <div class="modcontent">
-                                    <ul class="menu">
-                                        <li><a href="#">关于我们</a></li>
-                                        <li><a href="#">常见问题</a></li>
-                                        <li><a href="#">保修和服务</a></li>
-                                        <li><a href="#">全天候支持</a></li>
-                                        <li><a href="#">产品注册</a></li>
-                                        <li><a href="#">产品支持</a></li>
-                                    </ul>
+                                    <div class="subcribe">
+                                        <button class="btn btn-primary btn-default font-title" type="submit" onclick="return subscribe_newsletter();" name="submit">
+                                            订阅
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                        <div class="box-account box-footer">
-                            <div class="module clearfix">
-                                <h3 class="modtitle">我的账户</h3>
-                                <div class="modcontent">
-                                    <ul class="menu">
-                                        <li><a href="#">品牌</a></li>
-                                        <li><a href="#">礼券</a></li>
-                                        <li><a href="#">关联公司</a></li>
-                                        <li><a href="#">特价</a></li>
-                                        <li><a href="#">常见问题解答</a></li>
-                                        <li><a href="#">自定义链接</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-clear">
-                        <div class="box-service box-footer">
-                            <div class="module clearfix">
-                                <h3 class="modtitle">分类</h3>
-                                <div class="modcontent">
-                                    <ul class="menu">
-                                        <li><a href="#">活动和排队用品</a></li>
-                                        <li><a href="#">家具装修</a></li>
-                                        <li><a href="#">灯具</a></li>
-                                        <li><a href="#">厨房和浴室装置</a></li>
-                                        <li><a href="#">客户服务</a></li>
-                                        <li><a href="#">厨房和餐厅</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                        <div class="box-service box-footer">
-                            <div class="module clearfix">
-                                <h3 class="modtitle">服务</h3>
-                                <div class="modcontent">
-                                    <ul class="menu">
-                                        <li><a href="#">联系我们</a></li>
-                                        <li><a href="#">反馈</a></li>
-                                        <li><a href="#">支持</a></li>
-                                        <li><a href="#">网站地图</a></li>
-                                        <li><a href="#">客户服务</a></li>
-                                        <li><a href="#">自定义链接</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                        <div class="box-service box-footer">
-                            <div class="module clearfix">
-                                <h3 class="modtitle">合作伙伴</h3>
-                                <div class="modcontent">
-                                    <ul class="menu">
-                                        <li><a href="#">阿里巴巴集团</a></li>
-                                        <li><a href="#">支付宝</a></li>
-                                        <li><a href="#">飞猪</a></li>
-                                        <li><a href="#">优酷</a></li>
-                                        <li><a href="#">支付宝</a></li>
-                                        <li><a href="#">全球通卖通</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            </form>
 
 
+                        </div>
+                        <!--/.modcontent-->
+
+                    </div>
 
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- /Footer Top Container -->
+
+    <div class="footer-middle ">
         <div class="container">
             <div class="row">
-                <div class="footer-b">
-                    <div class="bottom-cont">
-                        <a href="#"><img src="image/catalog/demo/payment/pay1.jpg" alt="image"></a>
-                        <ul class="footer-links">
-                            <li><a href="#">关于我们</a></li>
-                            <li><a href="#">客户服务</a></li>
-                            <li><a href="#">私人政策</a></li>
-                            <li><a href="#">网站地图</a></li>
-                            <li><a href="#">订单和反馈</a></li>
-                            <li><a href="#">联系我们</a></li>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-infos">
+                    <div class="infos-footer">
+                        <a href="#"><img src="image/catalog/logo-footer.png" alt="image"></a>
+                        <ul class="menu">
+                            <li class="adres">
+                                中国 上海市 奉贤区 海湾镇海思路999号
+                            </li>
+                            <li class="phone">
+                                (+021)64833123
+                            </li>
+                            <li class="mail">
+                                <a href="mailto:ocean98@126.com">ocean98@126.com</a>
+                            </li>
+                            <li class="time">
+                                Open time: 8:00AM - 6:00PM
+                            </li>
                         </ul>
-                        <p>© 2018-现在 Moianbao.com 版权所有</p>
                     </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                    <div class="box-information box-footer">
+                        <div class="module clearfix">
+                            <h3 class="modtitle">信息</h3>
+                            <div class="modcontent">
+                                <ul class="menu">
+                                    <li><a href="#">关于我们</a></li>
+                                    <li><a href="#">常见问题</a></li>
+                                    <li><a href="#">保修和服务</a></li>
+                                    <li><a href="#">全天候支持</a></li>
+                                    <li><a href="#">产品注册</a></li>
+                                    <li><a href="#">产品支持</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                    <div class="box-account box-footer">
+                        <div class="module clearfix">
+                            <h3 class="modtitle">我的账户</h3>
+                            <div class="modcontent">
+                                <ul class="menu">
+                                    <li><a href="#">品牌</a></li>
+                                    <li><a href="#">礼券</a></li>
+                                    <li><a href="#">关联公司</a></li>
+                                    <li><a href="#">特价</a></li>
+                                    <li><a href="#">常见问题解答</a></li>
+                                    <li><a href="#">自定义链接</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-clear">
+                    <div class="box-service box-footer">
+                        <div class="module clearfix">
+                            <h3 class="modtitle">分类</h3>
+                            <div class="modcontent">
+                                <ul class="menu">
+                                    <li><a href="#">活动和排队用品</a></li>
+                                    <li><a href="#">家具装修</a></li>
+                                    <li><a href="#">灯具</a></li>
+                                    <li><a href="#">厨房和浴室装置</a></li>
+                                    <li><a href="#">客户服务</a></li>
+                                    <li><a href="#">厨房和餐厅</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                    <div class="box-service box-footer">
+                        <div class="module clearfix">
+                            <h3 class="modtitle">服务</h3>
+                            <div class="modcontent">
+                                <ul class="menu">
+                                    <li><a href="#">联系我们</a></li>
+                                    <li><a href="#">反馈</a></li>
+                                    <li><a href="#">支持</a></li>
+                                    <li><a href="#">网站地图</a></li>
+                                    <li><a href="#">客户服务</a></li>
+                                    <li><a href="#">自定义链接</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                    <div class="box-service box-footer">
+                        <div class="module clearfix">
+                            <h3 class="modtitle">合作伙伴</h3>
+                            <div class="modcontent">
+                                <ul class="menu">
+                                    <li><a href="#">阿里巴巴集团</a></li>
+                                    <li><a href="#">支付宝</a></li>
+                                    <li><a href="#">飞猪</a></li>
+                                    <li><a href="#">优酷</a></li>
+                                    <li><a href="#">支付宝</a></li>
+                                    <li><a href="#">全球通卖通</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="footer-b">
+                <div class="bottom-cont">
+                    <a href="#"><img src="image/catalog/demo/payment/pay1.jpg" alt="image"></a>
+                    <ul class="footer-links">
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">客户服务</a></li>
+                        <li><a href="#">私人政策</a></li>
+                        <li><a href="#">网站地图</a></li>
+                        <li><a href="#">订单和反馈</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                    <p>© 2018-现在 Moianbao.com 版权所有</p>
                 </div>
             </div>
         </div>
-        <!-- Footer Bottom Container -->
-        <div class="footer-bottom">
+    </div>
+    <!-- Footer Bottom Container -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="col-lg-12 col-xs-12 payment-w">
+                <img src="image/catalog/demo/payment/payment.png" alt="imgpayment">
+            </div>
+        </div>
+        <div class="copyright-w">
             <div class="container">
-                <div class="col-lg-12 col-xs-12 payment-w">
-                    <img src="image/catalog/demo/payment/payment.png" alt="imgpayment">
-                </div>
-            </div>
-            <div class="copyright-w">
-                <div class="container">
-                    <div class="copyright">
-                        SuperMarket © 2018 Demo Store. All Rights Reserved. Designed by <a href="../../../../../www.bootstrapmb.com/default.htm" target="_blank">OpenCartWorks.Com</a>
-                    </div>
+                <div class="copyright">
+                    SuperMarket © 2018 Demo Store. All Rights Reserved. Designed by <a href="../../../../../www.bootstrapmb.com/default.htm" target="_blank">OpenCartWorks.Com</a>
                 </div>
             </div>
         </div>
-        <!-- /Footer Bottom Container -->
+    </div>
+    <!-- /Footer Bottom Container -->
 
 
-        <!--Back To Top-->
-        <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
-    </footer>
-    <!-- //end Footer Container -->
+    <!--Back To Top-->
+    <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
+</footer>
+<!-- //end Footer Container -->
 
-</div>
+
 
 
 <!-- Include Libs & Plugins
