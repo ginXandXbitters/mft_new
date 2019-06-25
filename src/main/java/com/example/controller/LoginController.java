@@ -29,7 +29,7 @@ public class LoginController {
     public String admin_login(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String admin_pwd;
         String receive_pwd;
-        PrintWriter printWriter = response.getWriter();
+
 
         //判断账号是否存在
         if(loginMapper.ifexist_admin(request.getParameter("manager_id"))!=null){
@@ -41,11 +41,15 @@ public class LoginController {
                 return "administrator";
             }
             else{
+                System.out.println("123");
+                PrintWriter printWriter = response.getWriter();
                 printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
                 return null;
             }
         }
         else{
+
+            PrintWriter printWriter = response.getWriter();
             printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
             return null;
         }
@@ -55,7 +59,7 @@ public class LoginController {
     public String user_login(HttpServletRequest request, HttpServletResponse response) throws IOException{
         String user_pwd;
         String receive_pwd;
-        PrintWriter printWriter = response.getWriter();
+
 
         //判断账号是否存在
         if(loginMapper.ifexist_user(request.getParameter("user_id"))!=null){
@@ -66,11 +70,13 @@ public class LoginController {
                 return "index_user";
             }
             else{
+                PrintWriter printWriter = response.getWriter();
                 printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
                 return null;
             }
         }
         else{
+            PrintWriter printWriter = response.getWriter();
             printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
             return null;
         }
@@ -81,7 +87,7 @@ public class LoginController {
     public String store_login(HttpServletRequest request, HttpServletResponse response) throws IOException{
         String store_pwd;
         String receive_pwd;
-        PrintWriter printWriter = response.getWriter();
+
 
         //判断账号是否存在
         if(loginMapper.ifexist_store(request.getParameter("store_id"))!=null){
@@ -92,11 +98,13 @@ public class LoginController {
                 return "seller_homepage";
             }
             else{
+                PrintWriter printWriter = response.getWriter();
                 printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
                 return null;
             }
         }
         else{
+            PrintWriter printWriter = response.getWriter();
             printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
             return null;
         }
@@ -107,7 +115,6 @@ public class LoginController {
     public String supplier_login(HttpServletRequest request, HttpServletResponse response) throws IOException{
         String supplier_pwd;
         String receive_pwd;
-        PrintWriter printWriter = response.getWriter();
 
         //判断账号是否存在
         if(loginMapper.ifexist_supplier(request.getParameter("supplier_id"))!=null){
@@ -118,11 +125,13 @@ public class LoginController {
                 return "supplier";
             }
             else{
+                PrintWriter printWriter = response.getWriter();
                 printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
                 return null;
             }
         }
         else{
+            PrintWriter printWriter = response.getWriter();
             printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
             return null;
         }
