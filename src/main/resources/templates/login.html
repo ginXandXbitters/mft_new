@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <html lang="en">
 <head>
     
@@ -1005,12 +1006,12 @@
                                         <h2>管理员</h2>
                                         <p><strong>我是一个管理员</strong></p>
                                         <div class="form-group">
-                                            <label class="control-label " for="input-managerid">账号</label>
-                                            <input type="text" name="manager_id" value="" id="input-managerid" class="form-control" />
+                                            <label class="control-label " for="input-managerid">账号&nbsp;&nbsp;<i><span th:text="${admin_id}"></span></i></label>
+                                            <input type="text" name="manager_id"  id="input-managerid" class="form-control" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label " for="input-managerpwd">密码</label>
-                                            <input type="password" name="manager_password" value="" id="input-managerpwd" class="form-control" />
+                                            <label class="control-label " for="input-managerpwd">密码&nbsp;&nbsp;<i><span th:text="${admin_pwd}"></span></i></label>
+                                            <input type="password" name="manager_password" id="input-managerpwd" class="form-control" />
                                         </div>
                                     </div>
                                     <div class="bottom-form">
@@ -1026,11 +1027,11 @@
 										<h2>老顾客</h2>
 										<p><strong>我是一个老客户</strong></p>
 										<div class="form-group">
-											<label class="control-label " for="input-userid">账号</label>
+											<label class="control-label " for="input-userid">账号&nbsp;&nbsp;<i><span th:text="${user_id}"></span></i></label>
 											<input type="text" name="user_id" value="" id="input-userid" class="form-control" />
 										</div>
 										<div class="form-group">
-											<label class="control-label " for="input-userpwd">密码</label>
+											<label class="control-label " for="input-userpwd">密码&nbsp;&nbsp;<i><span th:text="${user_pwd}"></span></i></label>
 											<input type="password" name="user_pwd" value="" id="input-userpwd" class="form-control" />
 										</div>
 									</div>
@@ -1047,11 +1048,11 @@
                                         <h2>商店卖家</h2>
                                         <p><strong>我是一个商店卖家</strong></p>
                                         <div class="form-group">
-                                            <label class="control-label " for="input-sellerid">账号</label>
+                                            <label class="control-label " for="input-sellerid">账号&nbsp;&nbsp;<i><span th:text="${seller_id}"></span></i></label>
                                             <input type="text" name="store_id" value="" id="input-sellerid" class="form-control" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label " for="input-sellerpwd">密码</label>
+                                            <label class="control-label " for="input-sellerpwd">密码&nbsp;&nbsp;<i><span th:text="${seller_pwd}"></span></i></label>
                                             <input type="password" name="store_pwd" value="" id="input-sellerpwd" class="form-control" />
                                         </div>
                                     </div>
@@ -1068,11 +1069,11 @@
                                         <h2>供应商</h2>
                                         <p><strong>我是一个供应商</strong></p>
                                         <div class="form-group">
-                                            <label class="control-label " for="input-supplierid">账号</label>
+                                            <label class="control-label " for="input-supplierid">账号&nbsp;&nbsp;<i><span th:text="${sup_id}"></span></i></label>
                                             <input type="text" name="supplier_id" value="" id="input-supplierid" class="form-control" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label " for="input-supplierpwd">密码</label>
+                                            <label class="control-label " for="input-supplierpwd">密码&nbsp;&nbsp;<i><span th:text="${sup_pwd}"></span></i></label>
                                             <input type="password" name="supplier_pwd" value="" id="input-supplierpwd" class="form-control" />
                                         </div>
                                     </div>

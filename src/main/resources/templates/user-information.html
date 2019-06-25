@@ -1086,19 +1086,29 @@
                             </div>
                         </aside>
                         <div class="right1"style="float:left ; width:60%; height:100%;">
-                            <div><fieldset>
-                                <legend>用户信息管理</legend>
-                                <div class="form-group required">
-                                    <label for="input-product" class="col-sm-2 control-label">请输入用户ID</label>
-                                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="input-userID" placeholder="用户ID" value="" name="product">
-                               </div>
-                                    <div class="pull-right">
-                                        <input type="submit" class="btn btn-primary" value="查询">
-                                    </div>
-                               </div>
-                            </fieldset>
+                            <div>
+                                <form action="user-information/select_userinfo.html" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
+                                    <fieldset>
+                                        <legend>用户信息管理</legend>
+
+                                        <div class="form-group required">
+                                            <label for="input-product" class="col-sm-2 control-label">请输入用户ID</label>
+                                            <div class="col-sm-8">
+                                                 <input type="text" class="form-control" id="select_userid" placeholder="输入用户ID..." value="" name="select_userid">
+                                            </div>
+
+                                            <div class="pull-right">
+                                                <input type="submit" class="btn btn-primary" value="查询">
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+                                </form>
+
+
                                 <br/><br/>
+
+
                                 <fieldset>
                                    <legend>查询结果</legend>
                                 <div class="form-group">
@@ -1410,7 +1420,7 @@
 <!-- //end Footer Container -->
 
 
-
+</div>
 
 <!-- Include Libs & Plugins
 	============================================ -->

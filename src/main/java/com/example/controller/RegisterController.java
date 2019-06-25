@@ -18,6 +18,7 @@ public RegisterMapper registerMapper;
   public String NavigateToRegister(){
      return "register";
     }
+
     @RequestMapping("/login_afterregister.html")
     public String userInsert(HttpServletRequest request){
 
