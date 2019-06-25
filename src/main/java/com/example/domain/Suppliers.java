@@ -2,8 +2,10 @@ package com.example.domain;
 
 public class Suppliers {
     private String supplierID;
+    private String supplierPW;
     private String supplierName;
     private String storeID;
+    private int status;
 
     public String getSupplierID() {
         return supplierID;
@@ -11,6 +13,14 @@ public class Suppliers {
 
     public void setSupplierID(String supplierID) {
         this.supplierID = supplierID;
+    }
+
+    public String getSupplierPW() {
+        return supplierPW;
+    }
+
+    public void setSupplierPW(String supplierPW) {
+        this.supplierPW = supplierPW;
     }
 
     public String getSupplierName() {
@@ -29,12 +39,22 @@ public class Suppliers {
         this.storeID = storeID;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Suppliers{" +
                 "supplierID='" + supplierID + '\'' +
+                ", supplierPW='" + supplierPW + '\'' +
                 ", supplierName='" + supplierName + '\'' +
                 ", storeID='" + storeID + '\'' +
+                ", status=" + status +
                 '}';
     }
 }
