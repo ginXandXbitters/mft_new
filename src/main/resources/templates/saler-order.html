@@ -1101,6 +1101,119 @@
                 </tbody>
               </table>
             </div>
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>通知顾客</legend>
+                    <div class="form-group required">
+                        <label for="input-email" class="col-sm-2 control-label">电子邮件</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="input-coustome-email" placeholder="客户Email" value="" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-order-id" class="col-sm-2 control-label">订单编号</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="input-order-id" placeholder="订单编号" value="" name="order_id">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-date-ordered" class="col-sm-2 control-label">订单日期</label>
+                        <div class="col-sm-3">
+                            <div class="input-group date">
+                                <input type="text" class="form-control" id="input-date-ordered" data-date-format="YYYY-MM-DD" placeholder="订单日期" value="" name="date_ordered"><span class="input-group-btn">
+							<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+							</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-order-id" class="col-sm-2 control-label">通知内容</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="input-inform" placeholder="通知内容" rows="5" name="comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="align-center">
+                        <input type="button" class="btn btn-primary" id="button-confirm" value="发送通知">
+                    </div>
+                </fieldset>
+            </form>
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>通知供应商</legend>
+                    <div class="form-group required">
+                        <label for="input-email" class="col-sm-2 control-label">电子邮件</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="input-email" placeholder="供应商Email" value="" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-order-id" class="col-sm-2 control-label">订单编号</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="input-order-id-2" placeholder="订单编号" value="" name="order_id">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-date-ordered" class="col-sm-2 control-label">订单日期</label>
+                        <div class="col-sm-3">
+                            <div class="input-group date">
+                                <input type="text" class="form-control" id="input-date-ordered-2" data-date-format="YYYY-MM-DD" placeholder="订单日期" value="" name="date_ordered"><span class="input-group-btn">
+							<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+							</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-order-id" class="col-sm-2 control-label">通知内容</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="input-comment" placeholder="通知内容" rows="5" name="comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="align-center">
+                        <input type="button" class="btn btn-primary" id="button-confirm-2" value="发送通知">
+                    </div>
+                </fieldset>
+            </form>
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>销售统计</legend>
+                    <div class="form-group required">
+                        <label for="input-date-ordered" class="col-sm-2 control-label">起始日期</label>
+                        <div class="col-sm-3">
+                            <div class="input-group date">
+                                <input type="text" class="form-control" id="input-date-strat" data-date-format="YYYY-MM-DD" placeholder="订单日期" value="" name="date_ordered"><span class="input-group-btn">
+							<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+							</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-date-ordered" class="col-sm-2 control-label">终止日期</label>
+                        <div class="col-sm-3">
+                            <div class="input-group date">
+                                <input type="text" class="form-control" id="input-date-stop" data-date-format="YYYY-MM-DD" placeholder="订单日期" value="" name="date_ordered"><span class="input-group-btn">
+							<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+							</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-order-id" class="col-sm-2 control-label">订单类型</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="sort" placeholder="可选择性地输入想要查询的订单类型" value="" name="order_sort">
+                        </div>
+                    </div>
+                    <div class="align-center">
+                        <input type="button" class="btn btn-primary" id="search" value="查询">
+                    </div>
+                    <br/><br/>
+                    <div class="form-group">
+                        <label for="input-order-id" class="col-sm-2 control-label">查询结果</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="quantity" placeholder="查询到的订单总数量" value="" name="order_quantity" readonly="true">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
         <!--Middle Part End -->
 			
 		</div>
