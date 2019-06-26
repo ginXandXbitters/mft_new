@@ -56,10 +56,10 @@ public class MapperController {
 //        return "cart";
 //    }
 
-//    @RequestMapping("/category.html")
-//    public String NavigateTocategory(){
-//        return "category";
-//    }
+    @RequestMapping("/category.html")
+    public String NavigateTocategory(){
+        return "category";
+    }
     @RequestMapping("/category-v2.html")
     public String NavigateTocategory2(){
         return "category-v2";

@@ -7,7 +7,7 @@ public class Order {
     private String quantity;
     private String buytime;
     private String price;
-    private String status;
+    private int status;
     private String goodImage;
     private String goodName;
     private String userName;
@@ -65,11 +65,11 @@ public class Order {
         this.price = price;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
@@ -146,7 +146,7 @@ public class Order {
                 ", quantity=" + quantity + '\'' +
                 ", buytime='" + buytime + '\'' +
                 ", price='" + price + '\'' +
-                ", status='" + status + '\'' +
+                ", status='" + status +
                 ", goodImage='" + goodImage + '\'' +
                 ", goodName='" + goodName + '\'' +
                 ", userName='" + userName + '\'' +

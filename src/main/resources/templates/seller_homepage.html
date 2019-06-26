@@ -1055,7 +1055,7 @@
                                     <div class="article-image">
                                         <div>
                                             <a class="popup-gallery" th:href="|image/catalog/seller/${sp.sell_img}|">
-                                                <img th:src="${sp.sell_img}" />
+                                                <img th:src="|image/catalog/seller/${sp.sell_img}|" />
                                             </a>
                                         </div>
                                         <div class="article-date">
@@ -1072,9 +1072,9 @@
                                         <div class="article-title font-title">
                                             <h4><a href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html" th:text="${sp.sell_name}"></a></h4>
                                         </div>
-                                        <div class="blog-meta"> <span class="author" th:text="${sp.sell_sup}"><i class="fa fa-user"></i><span>供应商 </span></span>
+                                        <div class="blog-meta"> <span class="author" ><i class="fa fa-user"></i><span>供应商: </span><span th:text="${sp.sell_sup}"></span></span>
                                         </div>
-                                        <p class="article-description" th:text="售价+${sp.sell_price}"></p>
+                                        <p class="article-description" th:text="|售价:   ￥${sp.sell_price}|"></p>
                                         <div class="readmore">  <a class="btn-readmore font-title" href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html"><i class="fa fa-caret-right"></i>查看详情</a>
                                         </div>
                                     </div>
