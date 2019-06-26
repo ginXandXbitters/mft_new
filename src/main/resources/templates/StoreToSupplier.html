@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
 
     <!-- Basic page needs
@@ -39,6 +39,7 @@
     <link href="css/themecss/so-listing-tabs.css" rel="stylesheet">
     <link href="css/themecss/so-category-slider.css" rel="stylesheet">
     <link href="css/themecss/so-newletter-popup.css" rel="stylesheet">
+
     <link href="css/footer/footer1.css" rel="stylesheet">
     <link href="css/header/header1.css" rel="stylesheet">
     <link id="color_scheme" href="css/theme.css" rel="stylesheet">
@@ -53,7 +54,7 @@
 
 </head>
 
-<body class="res layout-1">
+<body class="res layout-1 layout-subpage">
 
 
 <div id="wrapper" class="wrapper-fluid banners-effect-5">
@@ -174,19 +175,18 @@
 
                                 <a data-loading-text="Loading... " class="btn-group top_cart dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                     <div class="shopcart">
-                                        <span class="icon-c">
-                                             <i class="fa fa-shopping-bag"></i>
-                                        </span>
+                                <span class="icon-c">
+                        <i class="fa fa-shopping-bag"></i>
+                      </span>
                                         <div class="shopcart-inner">
                                             <p class="text-shopping-cart">
-                                                我的上架商品
+
+                                                我的购物车
                                             </p>
 
                                             <span class="total-shopping-cart cart-total-full">
-                                                <span class="items_cart">06</span>
-                                                <span class="items_cart2"> item(s)</span>
-                                             </span>
-
+                           <span class="items_cart">02</span><span class="items_cart2"> item(s)</span><span class="items_carts">( ￥140.00 )</span>
+                                    </span>
                                         </div>
                                     </div>
                                 </a>
@@ -197,60 +197,71 @@
                                             <tbody>
                                             <tr>
                                                 <td class="text-center" style="width:70px">
-                                                    <a href="seller_homepage.html">
-                                                        <img src="image/catalog/seller/4.jpg" style="width:70px" class="preview">
+                                                    <a href="product.html">
+                                                        <img src="image/catalog/demo/product/80/1.jpg" style="width:70px" alt="Yutculpa ullamcon" title="Yutculpa ullamco" class="preview">
                                                     </a>
                                                 </td>
-                                                <td class="text-left"> <a class="cart_product_name" href="seller_homepage.html">宝驴 GT 1080</a>
+                                                <td class="text-left"> <a class="cart_product_name" href="product.html">秋季必备女式橄榄绿衬衣</a>
                                                 </td>
-                                                <td class="text-center">现货</td>
-                                                <td class="text-center">￥1,200,000.00</td>
+                                                <td class="text-center">x1</td>
+                                                <td class="text-center">￥80.00</td>
                                                 <td class="text-right">
-                                                    <a href="seller_homepage.html" class="fa fa-edit"></a>
+                                                    <a href="product.html" class="fa fa-edit"></a>
                                                 </td>
                                                 <td class="text-right">
                                                     <a onclick="cart.remove('2');" class="fa fa-times fa-delete"></a>
                                                 </td>
                                             </tr>
-
                                             <tr>
                                                 <td class="text-center" style="width:70px">
-                                                    <a href="seller_homepage.html">
-                                                        <img src="image/catalog/seller/2.jpg" style="width:70px" class="preview">
+                                                    <a href="product.html">
+                                                        <img src="image/catalog/demo/product/80/2.jpg" style="width:70px" alt="Xancetta bresao" title="Xancetta bresao" class="preview">
                                                     </a>
                                                 </td>
-                                                <td class="text-left"> <a class="cart_product_name" href="seller_homepage.html">豪华版尊贵TATA马桶 可自动清洗屁屁</a>
+                                                <td class="text-left"> <a class="cart_product_name" href="product.html">舒适宽版针织衫红</a>
                                                 </td>
-                                                <td class="text-center">现货</td>
-                                                <td class="text-center">￥2,000.00</td>
+                                                <td class="text-center">x1</td>
+                                                <td class="text-center">￥60.00</td>
                                                 <td class="text-right">
-                                                    <a href="seller_homepage.html" class="fa fa-edit"></a>
+                                                    <a href="product.html" class="fa fa-edit"></a>
                                                 </td>
                                                 <td class="text-right">
-                                                    <a onclick="cart.remove('2');" class="fa fa-times fa-delete"></a>
+                                                    <a onclick="cart.remove('1');" class="fa fa-times fa-delete"></a>
                                                 </td>
                                             </tr>
-
-                                            <tr>
-                                                <td class="text-center" style="width:70px">
-                                                    <a href="seller_homepage.html">
-                                                        <img src="image/catalog/seller/7.jpg" style="width:70px" class="preview">
-                                                    </a>
-                                                </td>
-                                                <td class="text-left"> <a class="cart_product_name" href="seller_homepage.html">蓝翔专用挖掘机 ATK 2080</a>
-                                                </td>
-                                                <td class="text-center">现货</td>
-                                                <td class="text-center">￥666,000.00</td>
-                                                <td class="text-right">
-                                                    <a href="seller_homepage.html" class="fa fa-edit"></a>
-                                                </td>
-                                                <td class="text-right">
-                                                    <a onclick="cart.remove('2');" class="fa fa-times fa-delete"></a>
-                                                </td>
-                                            </tr>
-
                                             </tbody>
                                         </table>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <table class="table table-bordered">
+                                                <tbody>
+                                                <tr>
+                                                    <td class="text-left"><strong>商品总价</strong>
+                                                    </td>
+                                                    <td class="text-right">￥140.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left"><strong>运费</strong>
+                                                    </td>
+                                                    <td class="text-right">￥12.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left"><strong>优惠</strong>
+                                                    </td>
+                                                    <td class="text-right">￥-12.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left"><strong>总价</strong>
+                                                    </td>
+                                                    <td class="text-right">￥140.00</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-center"> <a class="btn view-cart" href="cart.html"><i class="fa fa-shopping-cart"></i> 购物车</a>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <a class="btn btn-mega checkout-cart" href="checkout.html"><i class="fa fa-share"></i> 支付</a>
+                                            </p>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -261,7 +272,7 @@
                         <ul class="wishlist-comp hidden-md hidden-sm hidden-xs">
                             <li class="index hidden-xs"><a href="index.html" class="top-link-index" title="主页"><i class="fa fa-refresh"></i></a>
                             </li>
-                            <li class="wishlist hidden-xs"><a href="#" id="wishlist-total" class="top-link-wishlist" title="Wish List (0) "><i class="fa fa-heart"></i></a>
+                            <li class="wishlist hidden-xs"><a href="wishlist.html" id="wishlist-total" class="top-link-wishlist" title="心愿单"><i class="fa fa-heart"></i></a>
                             </li>
                         </ul>
 
@@ -732,52 +743,52 @@
                                                     <li class="home hover">
                                                         <a href="index.html">主页</a>
                                                         <!--<div class="sub-menu" style="width:100%;" >-->
-                                                            <!--<div class="content" >-->
-                                                                <!--<div class="row">-->
-                                                                    <!--<div class="col-md-4">-->
-                                                                        <!--<a href="index.html" class="image-link">-->
-                                                                    <!--<span class="thumbnail">-->
-                                                                        <!--<img class="img-responsive img-border" src="image/catalog/menu/home-1.jpg" alt="">-->
+                                                        <!--<div class="content" >-->
+                                                        <!--<div class="row">-->
+                                                        <!--<div class="col-md-4">-->
+                                                        <!--<a href="index.html" class="image-link">-->
+                                                        <!--<span class="thumbnail">-->
+                                                        <!--<img class="img-responsive img-border" src="image/catalog/menu/home-1.jpg" alt="">-->
 
-                                                                    <!--</span>-->
-                                                                            <!--<h3 class="figcaption">经典</h3>-->
-                                                                        <!--</a>-->
+                                                        <!--</span>-->
+                                                        <!--<h3 class="figcaption">经典</h3>-->
+                                                        <!--</a>-->
 
-                                                                    <!--</div>-->
-                                                                    <!--<div class="col-md-4">-->
-                                                                        <!--<a href="home2.html" class="image-link">-->
-                                                                    <!--<span class="thumbnail">-->
-                                                                        <!--<img class="img-responsive img-border" src="image/catalog/menu/home-2.jpg" alt="">-->
+                                                        <!--</div>-->
+                                                        <!--<div class="col-md-4">-->
+                                                        <!--<a href="home2.html" class="image-link">-->
+                                                        <!--<span class="thumbnail">-->
+                                                        <!--<img class="img-responsive img-border" src="image/catalog/menu/home-2.jpg" alt="">-->
 
-                                                                    <!--</span>-->
-                                                                            <!--<h3 class="figcaption">简约</h3>-->
-                                                                        <!--</a>-->
+                                                        <!--</span>-->
+                                                        <!--<h3 class="figcaption">简约</h3>-->
+                                                        <!--</a>-->
 
-                                                                    <!--</div>-->
-                                                                    <!--<div class="col-md-4">-->
-                                                                        <!--<a href="home3.html" class="image-link">-->
-                                                                    <!--<span class="thumbnail">-->
-                                                                        <!--<img class="img-responsive img-border" src="image/catalog/menu/home-3.jpg" alt="">-->
+                                                        <!--</div>-->
+                                                        <!--<div class="col-md-4">-->
+                                                        <!--<a href="home3.html" class="image-link">-->
+                                                        <!--<span class="thumbnail">-->
+                                                        <!--<img class="img-responsive img-border" src="image/catalog/menu/home-3.jpg" alt="">-->
 
-                                                                    <!--</span>-->
-                                                                            <!--<h3 class="figcaption">时尚</h3>-->
-                                                                        <!--</a>-->
+                                                        <!--</span>-->
+                                                        <!--<h3 class="figcaption">时尚</h3>-->
+                                                        <!--</a>-->
 
-                                                                    <!--</div>-->
+                                                        <!--</div>-->
 
 
-                                                                    <!--&lt;!&ndash; <div class="col-md-15">-->
-                                                                        <!--<a href="#" class="image-link">-->
-                                                                            <!--<span class="thumbnail">-->
-                                                                                <!--<img class="img-responsive img-border" src="image/demo/feature/comming-soon.png" alt="">-->
+                                                        <!--&lt;!&ndash; <div class="col-md-15">-->
+                                                        <!--<a href="#" class="image-link">-->
+                                                        <!--<span class="thumbnail">-->
+                                                        <!--<img class="img-responsive img-border" src="image/demo/feature/comming-soon.png" alt="">-->
 
-                                                                            <!--</span>-->
-                                                                            <!--<h3 class="figcaption">Comming soon</h3>-->
-                                                                        <!--</a>-->
+                                                        <!--</span>-->
+                                                        <!--<h3 class="figcaption">Comming soon</h3>-->
+                                                        <!--</a>-->
 
-                                                                    <!--</div> &ndash;&gt;-->
-                                                                <!--</div>-->
-                                                            <!--</div>-->
+                                                        <!--</div> &ndash;&gt;-->
+                                                        <!--</div>-->
+                                                        <!--</div>-->
                                                         <!--</div>-->
                                                     </li>
                                                     <li class="with-sub-menu hover">
@@ -971,6 +982,15 @@
                                                             </div>
                                                         </div>
                                                     </li>
+
+                                                    <!--                                                    <li class="">-->
+                                                    <!--                                                        <p class="close-menu"></p>-->
+                                                    <!--                                                        <a href="#" class="clearfix">-->
+                                                    <!--                                                            <strong>Accessories</strong>-->
+                                                    <!--                                         -->
+                                                    <!--                                                        </a>-->
+                                                    <!--                                            -->
+                                                    <!--                                                    </li>-->
                                                     <li class="">
                                                         <p class="close-menu"></p>
                                                         <a href="blog-page.html" class="clearfix">
@@ -1015,95 +1035,182 @@
     <!-- Main Container  -->
     <div class="main-container container">
         <ul class="breadcrumb">
-<!--            <li><a href="seller_homepage.html"><i class="fa fa-home"></i></a></li>-->
-<!--            <li><a href="#">Blog</a></li>-->
-
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li><a href="order-history.html">订单跟踪</a></li>
+            <li><a href="order-information.html">订单详情</a></li>
         </ul>
 
         <div class="row">
-
             <!--Middle Part Start-->
-            <div id="content" class="col-md-12 col-sm-12">
-                <div class="blog-header">
-                    <h3>上架商品</h3>
+            <div id="content" class="col-sm-12">
+                <h2 class="title">确认订单</h2>
 
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <td colspan="2" class="text-left">详情</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="width: 50%;" class="text-left"> <b>订单号：</b>100010001001
+                            <br>
+                            <b>日期：</b>2019.6.18</td>
+                        <td style="width: 50%;" class="text-left"> <b>支付方式：</b>支付宝
+                            <br>
+                            <b>快递公司：</b>顺丰</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <td style="width: 50%; vertical-align: top;" class="text-left">发出信息</td>
+                        <td style="width: 50%; vertical-align: top;" class="text-left">目的信息</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-left">董涛
+                            <br>上海市
+                            <br>奉贤区
+                            <br>华东理工大学奉贤校区
+                            <br>13761032710</td>
+                        <td class="text-left">欧子文
+                            <br>上海市
+                            <br>徐汇区
+                            <br>华东理工大学徐汇校区
+                            <br>18021068918</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <td class="text-left">商品名</td>
+                            <td class="text-left">型号</td>
+                            <td class="text-right">数量</td>
+                            <td class="text-right">价格类型</td>
+                            <td class="text-right">总金额</td>
+                            <td style="width: 20px;"></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-left">秋季必备女式橄榄绿衬衣</td>
+                            <td class="text-left">XXL</td>
+                            <td class="text-right">1</td>
+                            <td class="text-right"><b>商品原价</b></td>
+                            <td class="text-right">￥120.00</td>
+                            <td style="white-space: nowrap;" class="text-right"> <a class="btn btn-primary" title="" data-toggle="tooltip" href="cart.html" data-original-title="查看购物车"><i class="fa fa-shopping-cart"></i></a>
+                                <a class="btn btn-danger" title="" data-toggle="tooltip" href="return.html" data-original-title="退货"><i class="fa fa-reply"></i></a>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="text-right"><b>折后价格</b>
+                            </td>
+                            <td class="text-right">￥100.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="text-right"><b>优惠</b>
+                            </td>
+                            <td class="text-right">-￥20.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="text-right"><b>配送费</b>
+                            </td>
+                            <td class="text-right">￥12.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="text-right"><b>总金额</b>
+                            </td>
+                            <td class="text-right">￥92.00</td>
+                            <td></td>
+                        </tr>
+                        </tfoot>
+                    </table>
                 </div>
-                <div class="blog-category clearfix">
-
-                    <div class="product-filter product-filter-top filters-panel hidden-sm hidden-xs">
-                        <div class="row">
-                            <div class="col-sm-4 view-mode">
-                                <div class="list-view ">
-                                    <button type="button" id="grid-view" class="btn btn-view hidden-sm hidden-xs">1</button>
-                                    <button type="button" id="grid-view-2" class="btn btn-view hidden-sm hidden-xs ">2</button>
-                                    <button type="button" id="grid-view-3" class="btn btn-view hidden-sm hidden-xs ">3</button>
-                                    <button type="button" id="grid-view-4" class="btn btn-view hidden-sm hidden-xs ">4</button>
-                                    <button type="button" id="list-view" class="btn btn-view list "><i class="fa fa-bars"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <input type="submit" value="上架新的商品" style='font-size:15px;font-weight: 900' class="btn btn-default pull-right" onclick="javascript:location.href='grounding.html'"/>
-                        </div>
+                <!--				<h3>Order History</h3>-->
+                <!--				<table class="table table-bordered table-hover">-->
+                <!--					<thead>-->
+                <!--						<tr>-->
+                <!--							<td class="text-left">Date Added</td>-->
+                <!--							<td class="text-left">Status</td>-->
+                <!--						</tr>-->
+                <!--					</thead>-->
+                <!--					<tbody>-->
+                <!--						<tr>-->
+                <!--							<td class="text-left">20/06/2016</td>-->
+                <!--							<td class="text-left">Processing</td>-->
+                <!--						</tr>-->
+                <!--						<tr>-->
+                <!--							<td class="text-left">21/06/2016</td>-->
+                <!--							<td class="text-left">Shipped</td>-->
+                <!--						</tr>-->
+                <!--						<tr>-->
+                <!--							<td class="text-left">24/06/2016</td>-->
+                <!--							<td class="text-left">Complete</td>-->
+                <!--						</tr>-->
+                <!--					</tbody>-->
+                <!--				</table>-->
+                <div class="buttons clearfix">
+                    <div class="pull-left"><a class="btn btn-primary" onclick="SendToSupplier()">TO供货商</a>
                     </div>
-                    <div class="blog-listitem row">
-
-
-                        <div th:each="sp:${sp}" class="blog-item col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="blog-item-inner clearfix">
-
-                                <div class="itemBlogImg clearfix">
-                                    <div class="article-image">
-                                        <div>
-                                            <a class="popup-gallery" th:href="${sp.sell_img}">
-                                                <img th:src="${sp.sell_img}" />
-                                            </a>
-                                        </div>
-                                        <div class="article-date">
-                                            <div class="date">  <span class="article-date">
-                                                 现货
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="itemBlogContent clearfix ">
-                                    <div class="blog-content">
-                                        <div class="article-title font-title">
-                                            <h4><a href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html" th:text="${sp.sell_name}"></a></h4>
-                                        </div>
-                                        <div class="blog-meta"> <span class="author" th:text="${sp.sell_sup}"><i class="fa fa-user"></i><span>供应商 </span></span>
-                                        </div>
-                                        <p class="article-description" th:text="售价+${sp.sell_price}"></p>
-                                        <div class="readmore">  <a class="btn-readmore font-title" href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html"><i class="fa fa-caret-right"></i>查看详情</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-                    </div>
-                    <div class="product-filter product-filter-bottom filters-panel clearfix">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div></div>
-                            </div>
-                        </div>
+                    <div class="pull-right"><a class="btn btn-primary" href="saler-order.html">返回</a>
                     </div>
                 </div>
+
+
+
             </div>
+            <!--Middle Part End-->
+            <!--Right Part Start -->
+            <!--			<aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">-->
+            <!--				<h2 class="subtitle">Account</h2>-->
+            <!--                    <div class="list-group">-->
+            <!--                        <ul class="list-item">-->
+            <!--                            <li><a href="login.html">Login</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="register.html">Register</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">Forgotten Password</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">My Account</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">Address Books</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="wishlist.html">Wish List</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">Order History</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">Downloads</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">Reward Points</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">Returns</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">Transactions</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">Newsletter</a>-->
+            <!--                            </li>-->
+            <!--                            <li><a href="#">Recurring payments</a>-->
+            <!--                            </li>-->
+            <!--                        </ul>-->
+            <!--                    </div>			-->
+            <!--            </aside>-->
+            <!--Right Part End -->
         </div>
-        <!--Middle Part End-->
     </div>
     <!-- //Main Container -->
 
@@ -1331,7 +1438,7 @@
 <script type="text/javascript" src="js/datetimepicker/moment.js"></script>
 <script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-
+<script type="text/javascript" src="js/self_js/saler-order.js"></script>
 
 <!-- Theme files
 ============================================ -->
@@ -1340,6 +1447,8 @@
 <script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
 <script type="text/javascript" src="js/themejs/addtocart.js"></script>
 <script type="text/javascript" src="js/themejs/application.js"></script>
+
+
 
 </body>
 </html>
