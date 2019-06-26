@@ -22,7 +22,7 @@ import org.springframework.ui.Model;
 
 @Controller
 public class LoginController {
-
+static  String get_user_id;
     @Autowired
     LoginMapper loginMapper;
     @Autowired
@@ -75,6 +75,9 @@ public class LoginController {
             receive_pwd=request.getParameter("user_pwd");
 
             if(user_pwd.equals(receive_pwd)){
+                get_user_id=request.getParameter("user_id");
+                model.addAttribute("uid",request.getParameter("user_id"));
+
                 return "index_user";
             }
             else{

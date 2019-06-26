@@ -1,6 +1,6 @@
 ﻿
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     
     <!-- Basic page needs
@@ -67,7 +67,7 @@
             <div class="container">
                 <div class="row">
                     <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
-                        <div class="hidden-md hidden-sm hidden-xs welcome-msg">欢迎来到摸仙宝！尊敬的用户，你可以在摸仙宝找到所有你需要的东西！<span>巴啦啦快乐2019！<i>（软件工程课设）</i></span> </div>
+                        <div class="hidden-md hidden-sm hidden-xs welcome-msg">欢迎来到摸仙宝！尊敬的用户<span th:text="${uid}" name="user_id"></span>，你可以在摸仙宝找到所有你需要的东西！<span>巴啦啦快乐2019！<i>（软件工程课设）</i></span> </div>
                         <ul class="top-link list-inline hidden-lg ">
                             <li class="account" id="my_account">
                                 <a href="#" title="My Account " class="btn-xs dropdown-toggle" data-toggle="dropdown"> <span class="hidden-xs">My Account </span>  <span class="fa fa-caret-down"></span>
@@ -996,7 +996,7 @@
         <div id="content" class="col-sm-12">
           <h2 class="title">购物车</h2>
             <div class="table-responsive form-group">
-              <table class="table table-bordered">
+              <table class="table table-bordered" >
                 <thead>
                   <tr>
                     <td class="text-center">图片</td>
@@ -1007,34 +1007,21 @@
                     <td class="text-right">总价</td>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/8.jpg" alt="Aspire Ultrabook Laptop" title="Aspire Ultrabook Laptop" class="img-thumbnail" /></a></td>
-                    <td class="text-left"><a href="product.html">红鞋</a><br />
-                     </td>
-                    <td class="text-left">Pt 001</td>
-                    <td class="text-left" width="200px"><div class="input-group btn-block quantity">
-                        <input type="text" id="quantity1" name="quantity" value="1" size="1" class="form-control" />
-                        <span class="input-group-btn">
-                        <button type="button" data-toggle="tooltip" title="Update" class="btn btn-primary" onclick="good1()"><i class="fa fa-clone"></i></button>
-                        <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onclick="reset1()" ><i class="fa fa-times-circle"></i></button>
-                        </span></div></td>
-                    <td class="text-right">¥120.00</td>
-                    <td class="text-right" id="price1"></td>
-                  </tr>
-                  <tr>
-                    <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/10.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
-                    <td class="text-left"><a href="product.html">水钻鞋</a></td>
-                    <td class="text-left">Pt 002</td>
-                    <td class="text-left" width="200px"><div class="input-group btn-block quantity">
-                        <input type="text" id="quantity2" name="quantity" value="1" size="1" class="form-control" />
-                        <span class="input-group-btn">
-                        <button type="button" data-toggle="tooltip" title="Update" class="btn btn-primary" onclick="good2()"><i class="fa fa-clone"></i></button>
-                        <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onClick="reset2()"><i class="fa fa-times-circle"></i></button>
-                        </span></div></td>
-                    <td class="text-right">¥150.00</td>
-                    <td class="text-right" id="price2"></td>
-                  </tr>
+                <tbody >
+                    <tr th:each="cartlist:${cartlist}">
+                        <td class="text-center"><a href="product.html"><img width="70px" th:src="|image/catalog/demo/product/80/${cartlist.goodImage}|" alt="Aspire Ultrabook Laptop" title="Aspire Ultrabook Laptop" class="img-thumbnail" /></a></td>
+                        <td class="text-left" th:text="${cartlist.goodName}"></td>
+                        <td class="text-left" th:text="${cartlist.brand}"></td>
+                        <td class="text-left" width="200px"><div class="input-group btn-block quantity">
+                            <input type="text" id="quantity1" name="quantity" th:value="${cartlist.quantity}" size="1" class="form-control" />
+                            <span class="input-group-btn">
+                                                        <button type="button" data-toggle="tooltip" title="Update" class="btn btn-primary" onclick="good1()"><i class="fa fa-clone"></i></button>
+                                                        <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onclick="reset1()" ><i class="fa fa-times-circle"></i></button>
+                                                    </span></div></td>
+                        <td class="text-right" th:text="|￥${cartlist.price}|"></td>
+                        <td class="text-right">￥<span th:text="${cartlist.price}*${cartlist.quantity}"></span></td>
+                    </tr>
+
                 </tbody>
               </table>
             </div>

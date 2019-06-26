@@ -51,10 +51,10 @@ public class MapperController {
         return "blog-page";
     }
 
-    @RequestMapping("/cart.html")
-    public String NavigateTocart(){
-        return "cart";
-    }
+//    @RequestMapping("/cart.html")
+//    public String NavigateTocart(){
+//        return "cart";
+//    }
 
 //    @RequestMapping("/category.html")
 //    public String NavigateTocategory(){
@@ -68,10 +68,10 @@ public class MapperController {
     public String NavigateTocategory3(){
         return "category-v3";
     }
-    @RequestMapping("/checkout.html")
-    public String NavigateTocheckout(){
-        return "checkout";
-    }
+//    @RequestMapping("/checkout.html")
+//    public String NavigateTocheckout(){
+//        return "checkout";
+//    }
     @RequestMapping("/compare.html")
     public String NavigateTocompare(){
         return "compare";

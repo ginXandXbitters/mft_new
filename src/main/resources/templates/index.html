@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 
     <!-- Basic page needs
@@ -67,7 +67,7 @@
             <div class="container">
                 <div class="row">
                     <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
-                        <div class="hidden-md hidden-sm hidden-xs welcome-msg">欢迎来到摸仙宝！尊敬的用户，你可以在摸仙宝找到所有你需要的东西！<span>巴啦啦快乐2019！<i>（软件工程课设）</i></span> </div>
+                        <div class="hidden-md hidden-sm hidden-xs welcome-msg">欢迎来到摸仙宝！尊敬的用户<span th:text="${uid}" ></span>，你可以在摸仙宝找到所有你需要的东西！<span>巴啦啦快乐2019！<i>（软件工程课设）</i></span> </div>
                         <ul class="top-link list-inline hidden-lg ">
                             <li class="account" id="my_account">
                                 <a href="#" title="My Account " class="btn-xs dropdown-toggle" data-toggle="dropdown"> <span class="hidden-xs">My Account </span>  <span class="fa fa-caret-down"></span>
