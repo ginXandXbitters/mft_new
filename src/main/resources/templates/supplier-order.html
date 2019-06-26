@@ -1,4 +1,4 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +54,7 @@
 
 </head>
 
-<body class="res layout-1 layout-subpage">
+<body class="res layout-1">
 
     <div id="wrapper" class="wrapper-fluid banners-effect-5">
 
@@ -983,138 +983,152 @@
         </div>
     </header>
     <!-- //Header Container  -->
-
     
 	<!-- Main Container  -->
 	<div class="main-container container">
 		<ul class="breadcrumb">
 			<li><a href="#"><i class="fa fa-home"></i></a></li>
-			<li><a href="#">我的账户</a></li>
-			<li><a href="#">登录</a></li>
+			<li><a href="#">供应商订单</a></li>
 		</ul>
-		
-		<div class="row">
-			<div id="content" class="col-sm-12">
-				<div class="page-login">
-				
-					<div class="account-border">
-						<div class="row">
 
-                            <form action="administrator.html" method="post" enctype="multipart/form-data">
-                                <div class="col-sm-6 customer-login">
-                                    <div class="well">
-                                        <h2>管理员</h2>
-                                        <p><strong>我是一个管理员</strong></p>
-                                        <div class="form-group">
-                                            <label class="control-label " for="input-managerid">账号&nbsp;&nbsp;<i><span th:text="${admin_id}"></span></i></label>
-                                            <input type="text" name="manager_id"  id="input-managerid" class="form-control" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label " for="input-managerpwd">密码&nbsp;&nbsp;<i><span th:text="${admin_pwd}"></span></i></label>
-                                            <input type="password" name="manager_password" id="input-managerpwd" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="bottom-form">
-                                        <b>抱歉！管理员无法注册</b>
-                                        <input type="submit" value="登录" class="btn btn-default pull-right" />
-                                    </div>
+        <div class="row">
+            <!--Middle Part Start-->
+            <div id="content" class="col-sm-12">
+                <h2 class="title">供应商待处理订单</h2>
+                <div class="table-responsive form-group">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <td class="text-center">图片</td>
+                            <td class="text-center">商品名</td>
+                            <td class="text-center">型号</td>
+                            <td class="text-center">数量</td>
+                            <td class="text-center">单价</td>
+                            <td class="text-center">总价</td>
+                            <td class="text-center">处理</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/8.jpg" alt="Aspire Ultrabook Laptop" title="Aspire Ultrabook Laptop" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br />红鞋</a></td>
+                            <td class="text-center"><br />Pt 001</td>
+                            <td class="text-center"><br />1</td>
+                            <td class="text-center"><br/>¥120.00</td>
+                            <td class="text-center"><br/>¥120.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
                                 </div>
-                            </form>
-							
-							<form action="index_user.html" method="post" enctype="multipart/form-data">
-								<div class="col-sm-6 customer-login">
-									<div class="well">
-										<h2>老顾客</h2>
-										<p><strong>我是一个老客户</strong></p>
-										<div class="form-group">
-											<label class="control-label " for="input-userid">账号&nbsp;&nbsp;<i><span th:text="${user_id}"></span></i></label>
-											<input type="text" name="user_id" value="" id="input-userid" class="form-control" />
-										</div>
-										<div class="form-group">
-											<label class="control-label " for="input-userpwd">密码&nbsp;&nbsp;<i><span th:text="${user_pwd}"></span></i></label>
-											<input type="password" name="user_pwd" value="" id="input-userpwd" class="form-control" />
-										</div>
-									</div>
-									<div class="bottom-form">
-										<a href="register.html" class="forgot">没有账号？点击这里前往注册</a>
-										<input type="submit" value="登录" class="btn btn-default pull-right" />
-									</div>
-								</div>
-							</form>
-
-                            <form action="seller_homepage.html" method="post" enctype="multipart/form-data">
-                                <div class="col-sm-6 customer-login">
-                                    <div class="well">
-                                        <h2>商店卖家</h2>
-                                        <p><strong>我是一个商店卖家</strong></p>
-                                        <div class="form-group">
-                                            <label class="control-label " for="input-sellerid">账号&nbsp;&nbsp;<i><span th:text="${seller_id}"></span></i></label>
-                                            <input type="text" name="store_id" value="" id="input-sellerid" class="form-control" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label " for="input-sellerpwd">密码&nbsp;&nbsp;<i><span th:text="${seller_pwd}"></span></i></label>
-                                            <input type="password" name="store_pwd" value="" id="input-sellerpwd" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="bottom-form">
-                                        <a href="register.html" class="forgot">没有账号？点击这里前往注册</a>
-                                        <input type="submit" value="登录" class="btn btn-default pull-right" />
-                                    </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
                                 </div>
-                            </form>
-
-                            <form action="supplier.html" method="post" enctype="multipart/form-data">
-                                <div class="col-sm-6 customer-login">
-                                    <div class="well">
-                                        <h2>供应商</h2>
-                                        <p><strong>我是一个供应商</strong></p>
-                                        <div class="form-group">
-                                            <label class="control-label " for="input-supplierid">账号&nbsp;&nbsp;<i><span th:text="${sup_id}"></span></i></label>
-                                            <input type="text" name="supplier_id" value="" id="input-supplierid" class="form-control" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label " for="input-supplierpwd">密码&nbsp;&nbsp;<i><span th:text="${sup_pwd}"></span></i></label>
-                                            <input type="password" name="supplier_pwd" value="" id="input-supplierpwd" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="bottom-form">
-                                        <a href="register.html" class="forgot">没有账号？点击这里前往注册</a>
-                                        <input type="submit" value="登录" class="btn btn-default pull-right" />
-                                    </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/10.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>水钻鞋</a></td>
+                            <td class="text-center"><br />Pt 002</td>
+                            <td class="text-center"><br />1</td>
+                            <td class="text-center"><br/>¥220.00</td>
+                            <td class="text-center"><br/>¥220.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
                                 </div>
-                            </form>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/9.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>黑色高跟鞋</a></td>
+                            <td class="text-center"><br />Pt 003</td>
+                            <td class="text-center"><br />2</td>
+                            <td class="text-center"><br/>¥160.00</td>
+                            <td class="text-center"><br/>¥320.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/7.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>褐色手提包</a></td>
+                            <td class="text-center"><br/>Pt 004</td>
+                            <td class="text-center"><br />2</td>
+                            <td class="text-center"><br/>¥350.00</td>
+                            <td class="text-center"><br/>¥700.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/6.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>黑色手提包</a></td>
+                            <td class="text-center"><br/>Pt 005</td>
+                            <td class="text-center"><br />4</td>
+                            <td class="text-center"><br/>¥150.00</td>
+                            <td class="text-center"><br/>¥600.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/5.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
+                            <td class="text-center"><a href="product.html"><br/>双肩包</a></td>
+                            <td class="text-center"><br/>Pt 006</td>
+                            <td class="text-center"><br />3</td>
+                            <td class="text-center"><br/>¥130.00</td>
+                            <td class="text-center"><br/>¥390.00</td>
+                            <td class="text-center">
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-primary">接受</a></div>
+                                </div>
+                                <div class="buttons">
+                                    <div class="align-center"><a class="btn btn-danger">拒绝</a></div>
+                                </div>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--Middle Part End -->
 
-
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
+            </div>
+        </div>
 	</div>
 	<!-- //Main Container -->
 	
 
 	<!-- Footer Container -->
-    <footer class="footer-container typefooter-1">
-        <!-- Footer Top Container -->
- 
+        <footer class="footer-container typefooter-1">
+            <!-- Footer Top Container -->
+
             <div class="container">
                 <div class="row footer-top">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="socials-w">
-                          <h2>社交平台</h2>
-                          <ul class="socials">
-                            <li class="facebook"><a href="../../../../../https@www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                            <li class="twitter"><a href="../../../../../https@twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                            <li class="google_plus"><a href="../../../../../https@plus.google.com/u/0/+Smartaddons/posts" target="_blank"><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
-                            <li class="pinterest"><a href="../../../../../https@www.pinterest.com/smartaddons/default.htm" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
-                            <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a></li>
-                            <li class="linkedin"><a href="#" target="_blank"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
-                            <li class="skype"><a href="#" target="_blank"><i class="fa fa-skype"></i><span>skype</span></a></li>
-                          </ul>
+                            <h2>社交平台</h2>
+                            <ul class="socials">
+                                <li class="facebook"><a href="../../../../../https@www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                <li class="twitter"><a href="../../../../../https@twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                <li class="google_plus"><a href="../../../../../https@plus.google.com/u/0/+Smartaddons/posts" target="_blank"><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
+                                <li class="pinterest"><a href="../../../../../https@www.pinterest.com/smartaddons/default.htm" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
+                                <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a></li>
+                                <li class="linkedin"><a href="#" target="_blank"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
+                                <li class="skype"><a href="#" target="_blank"><i class="fa fa-skype"></i><span>skype</span></a></li>
+                            </ul>
                         </div>
-                        
+
 
 
 
@@ -1128,7 +1142,7 @@
                                     <div class="page-heading font-title">
                                         接收推送邮箱
                                     </div>
-                                    
+
                                 </div>
 
                                 <div class="block_content">
@@ -1139,8 +1153,8 @@
                                             </div>
                                             <div class="subcribe">
                                                 <button class="btn btn-primary btn-default font-title" type="submit" onclick="return subscribe_newsletter();" name="submit">
-                                            订阅
-                                        </button>
+                                                    订阅
+                                                </button>
                                             </div>
                                         </div>
                                     </form>
@@ -1155,168 +1169,154 @@
                     </div>
                 </div>
             </div>
-      
-        <!-- /Footer Top Container -->
-        
-        <div class="footer-middle ">
+
+            <!-- /Footer Top Container -->
+
+            <div class="footer-middle ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-infos">
+                            <div class="infos-footer">
+                                <a href="#"><img src="image/catalog/logo-footer.png" alt="image"></a>
+                                <ul class="menu">
+                                    <li class="adres">
+                                        中国 上海市 奉贤区 海湾镇海思路999号
+                                    </li>
+                                    <li class="phone">
+                                        (+021)64833123
+                                    </li>
+                                    <li class="mail">
+                                        <a href="mailto:ocean98@126.com">ocean98@126.com</a>
+                                    </li>
+                                    <li class="time">
+                                        Open time: 8:00AM - 6:00PM
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-information box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">信息</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">关于我们</a></li>
+                                            <li><a href="#">常见问题</a></li>
+                                            <li><a href="#">保修和服务</a></li>
+                                            <li><a href="#">全天候支持</a></li>
+                                            <li><a href="#">产品注册</a></li>
+                                            <li><a href="#">产品支持</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-account box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">我的账户</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">品牌</a></li>
+                                            <li><a href="#">礼券</a></li>
+                                            <li><a href="#">关联公司</a></li>
+                                            <li><a href="#">特价</a></li>
+                                            <li><a href="#">常见问题解答</a></li>
+                                            <li><a href="#">自定义链接</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-clear">
+                            <div class="box-service box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">分类</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">活动和排队用品</a></li>
+                                            <li><a href="#">家具装修</a></li>
+                                            <li><a href="#">灯具</a></li>
+                                            <li><a href="#">厨房和浴室装置</a></li>
+                                            <li><a href="#">客户服务</a></li>
+                                            <li><a href="#">厨房和餐厅</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-service box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">服务</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">联系我们</a></li>
+                                            <li><a href="#">反馈</a></li>
+                                            <li><a href="#">支持</a></li>
+                                            <li><a href="#">网站地图</a></li>
+                                            <li><a href="#">客户服务</a></li>
+                                            <li><a href="#">自定义链接</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-service box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">合作伙伴</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">阿里巴巴集团</a></li>
+                                            <li><a href="#">支付宝</a></li>
+                                            <li><a href="#">飞猪</a></li>
+                                            <li><a href="#">优酷</a></li>
+                                            <li><a href="#">支付宝</a></li>
+                                            <li><a href="#">全球通卖通</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-infos">
-                        <div class="infos-footer">
-                            <a href="#"><img src="image/catalog/logo-footer.png" alt="image"></a>
-                            <ul class="menu">
-                                <li class="adres">
-                                    中国 上海市 奉贤区 海湾镇海思路999号
-                                </li>
-                                <li class="phone">
-                                    (+021)64833123
-                                </li>
-                                <li class="mail">
-                                    <a href="mailto:ocean98@126.com">ocean98@126.com</a>
-                                </li>
-                                <li class="time">
-                                    Open time: 8:00AM - 6:00PM
-                                </li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                        <div class="box-information box-footer">
-                            <div class="module clearfix">
-                                <h3 class="modtitle">信息</h3>
-                                <div class="modcontent">
-                                    <ul class="menu">
-                                        <li><a href="#">关于我们</a></li>
-                                        <li><a href="#">常见问题</a></li>
-                                        <li><a href="#">保修和服务</a></li>
-                                        <li><a href="#">全天候支持</a></li>
-                                        <li><a href="#">产品注册</a></li>
-                                        <li><a href="#">产品支持</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                        <div class="box-account box-footer">
-                            <div class="module clearfix">
-                                <h3 class="modtitle">我的账户</h3>
-                                <div class="modcontent">
-                                    <ul class="menu">
-                                        <li><a href="#">品牌</a></li>
-                                        <li><a href="#">礼券</a></li>
-                                        <li><a href="#">关联公司</a></li>
-                                        <li><a href="#">特价</a></li>
-                                        <li><a href="#">常见问题解答</a></li>
-                                        <li><a href="#">自定义链接</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-clear">
-                        <div class="box-service box-footer">
-                          <div class="module clearfix">
-                            <h3 class="modtitle">分类</h3>
-                            <div class="modcontent">
-                              <ul class="menu">
-                                <li><a href="#">活动和排队用品</a></li>
-                                <li><a href="#">家具装修</a></li>
-                                <li><a href="#">灯具</a></li>
-                                <li><a href="#">厨房和浴室装置</a></li>
+                    <div class="footer-b">
+                        <div class="bottom-cont">
+                            <a href="#"><img src="image/catalog/demo/payment/pay1.jpg" alt="image"></a>
+                            <ul class="footer-links">
+                                <li><a href="#">关于我们</a></li>
                                 <li><a href="#">客户服务</a></li>
-                                <li><a href="#">厨房和餐厅</a></li>
-                              </ul>
-                            </div>
-                          </div>
+                                <li><a href="#">私人政策</a></li>
+                                <li><a href="#">网站地图</a></li>
+                                <li><a href="#">订单和反馈</a></li>
+                                <li><a href="#">联系我们</a></li>
+                            </ul>
+                            <p>© 2018-现在 Moianbao.com 版权所有</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                        <div class="box-service box-footer">
-                            <div class="module clearfix">
-                                <h3 class="modtitle">服务</h3>
-                                <div class="modcontent">
-                                    <ul class="menu">
-                                        <li><a href="#">联系我们</a></li>
-                                        <li><a href="#">反馈</a></li>
-                                        <li><a href="#">支持</a></li>
-                                        <li><a href="#">网站地图</a></li>
-                                        <li><a href="#">客户服务</a></li>
-                                        <li><a href="#">自定义链接</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
-                        <div class="box-service box-footer">
-                          <div class="module clearfix">
-                            <h3 class="modtitle">合作伙伴</h3>
-                            <div class="modcontent">
-                              <ul class="menu">
-                                  <li><a href="#">阿里巴巴集团</a></li>
-                                  <li><a href="#">支付宝</a></li>
-                                  <li><a href="#">飞猪</a></li>
-                                  <li><a href="#">优酷</a></li>
-                                  <li><a href="#">支付宝</a></li>
-                                  <li><a href="#">全球通卖通</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-
-
-                    
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                        <div class="footer-b">
-                            <div class="bottom-cont">
-                                <a href="#"><img src="image/catalog/demo/payment/pay1.jpg" alt="image"></a>
-                                <ul class="footer-links">
-                                    <li><a href="#">关于我们</a></li>
-                                    <li><a href="#">客户服务</a></li>
-                                    <li><a href="#">私人政策</a></li>
-                                    <li><a href="#">网站地图</a></li>
-                                    <li><a href="#">订单和反馈</a></li>
-                                    <li><a href="#">联系我们</a></li>
-                                </ul>  
-                                <p>© 2018-现在 Moianbao.com 版权所有</p>
-                            </div>
-                        </div>
-            </div>
-        </div>
-        <!-- Footer Bottom Container -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="col-lg-12 col-xs-12 payment-w">
-                <img src="image/catalog/demo/payment/payment.png" alt="imgpayment">
-                </div>
-            </div>
-            <div class="copyright-w">
-                <div class="container">
-                    <div class="copyright">
-                    SuperMarket © 2018 Demo Store. All Rights Reserved. Designed by <a href="../../../../../www.bootstrapmb.com/default.htm" target="_blank">OpenCartWorks.Com</a>
-                    </div>
-                </div>
-            </div>            
-        </div>
-        <!-- /Footer Bottom Container -->
-        
-        
+            <!-- /Footer Bottom Container -->
+
+
             <!--Back To Top-->
-        <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
-    </footer>
+            <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
+        </footer>
     <!-- //end Footer Container -->
 
     </div>
+	
 	
 <!-- Include Libs & Plugins
 	============================================ -->
@@ -1332,6 +1332,7 @@
 	<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
 	<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/self_js/shoppingcart.js"></script>
 	
 	
 	<!-- Theme files
@@ -1341,8 +1342,6 @@
 	<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
 	<script type="text/javascript" src="js/themejs/addtocart.js"></script>
 	<script type="text/javascript" src="js/themejs/application.js"></script>
-	
-	
-	
+		
 </body>
 </html>

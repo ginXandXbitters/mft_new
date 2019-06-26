@@ -8,6 +8,7 @@ import com.example.mapper.SupplierMapper;
 import com.example.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -35,7 +36,7 @@ public class LoginController {
     }
 
     @RequestMapping("/administrator.html")
-    public String admin_login(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public String admin_login(HttpServletRequest request, Model model) throws IOException {
         String admin_pwd;
         String receive_pwd;
 
@@ -50,22 +51,20 @@ public class LoginController {
                 return "administrator";
             }
             else{
-                System.out.println("123");
-                PrintWriter printWriter = response.getWriter();
-                printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
-                return null;
+
+                model.addAttribute("admin_pwd","密码不正确！请重新输入");
+                return "login";
             }
         }
         else{
 
-            PrintWriter printWriter = response.getWriter();
-            printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
-            return null;
+            model.addAttribute("admin_id","账号不存在！请重新输入");
+            return "login";
         }
     }
 
     @RequestMapping("/index_user.html")
-    public String user_login(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    public String user_login(HttpServletRequest request, Model model) throws IOException{
         String user_pwd;
         String receive_pwd;
 
@@ -79,21 +78,19 @@ public class LoginController {
                 return "index_user";
             }
             else{
-                PrintWriter printWriter = response.getWriter();
-                printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
-                return null;
+                model.addAttribute("user_pwd","密码不正确！请重新输入");
+                return "login";
             }
         }
         else{
-            PrintWriter printWriter = response.getWriter();
-            printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
-            return null;
+            model.addAttribute("user_id","账号不存在！请重新输入");
+            return "login";
         }
 
     }
 
     @RequestMapping("/seller_homepage.html")
-    public String store_login(HttpServletRequest request, HttpServletResponse response,Model model) throws IOException{
+    public String store_login(HttpServletRequest request, Model model) throws IOException{
         String store_pwd;
         String receive_pwd;
 
@@ -109,21 +106,19 @@ public class LoginController {
                 return "seller_homepage";
             }
             else{
-                PrintWriter printWriter = response.getWriter();
-                printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
-                return null;
+                model.addAttribute("seller_pwd","密码不正确！请重新输入");
+                return "login";
             }
         }
         else{
-            PrintWriter printWriter = response.getWriter();
-            printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
-            return null;
+            model.addAttribute("seller_id","账号不存在！请重新输入");
+            return "login";
         }
 
     }
 
     @RequestMapping("/supplier.html")
-    public String supplier_login(HttpServletRequest request, HttpServletResponse response,Model model) throws IOException{
+    public String supplier_login(HttpServletRequest request, Model model) throws IOException{
         String supplier_pwd;
         String receive_pwd;
 
@@ -140,15 +135,13 @@ public class LoginController {
                 return "supplier";
             }
             else{
-                PrintWriter printWriter = response.getWriter();
-                printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
-                return null;
+                model.addAttribute("sup_pwd","密码不正确！请重新输入");
+                return "login";
             }
         }
         else{
-            PrintWriter printWriter = response.getWriter();
-            printWriter.print("<script language=\"javascript\">alert('Account doesn't exist!');</script>");
-            return null;
+            model.addAttribute("sup_id","账号不存在！请重新输入");
+            return "login";
         }
     }
 
