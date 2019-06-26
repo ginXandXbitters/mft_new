@@ -2,6 +2,7 @@ package com.example.controller;
 
 import com.example.domain.Admin;
 import com.example.mapper.LoginMapper;
+import com.example.mapper.SupplierMapper;
 import com.example.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,13 +13,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import org.springframework.ui.Model;
 
 @Controller
 public class LoginController {
 
     @Autowired
     LoginMapper loginMapper;
-
+    @Autowired
+    SupplierMapper supplierMapper;
     @RequestMapping("/login.html")
     public String login_page(){
 
@@ -112,7 +115,7 @@ public class LoginController {
     }
 
     @RequestMapping("/supplier.html")
-    public String supplier_login(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    public String supplier_login(HttpServletRequest request, HttpServletResponse response,Model model) throws IOException{
         String supplier_pwd;
         String receive_pwd;
 
@@ -122,6 +125,10 @@ public class LoginController {
             receive_pwd=request.getParameter("supplier_pwd");
 
             if(supplier_pwd.equals(receive_pwd)){
+                int quantity1=supplierMapper.queryQuantity("g10");
+                int quantity2=supplierMapper.queryQuantity("g11");
+            model.addAttribute("quantity1", quantity1);
+                model.addAttribute("quantity2", quantity2);
                 return "supplier";
             }
             else{

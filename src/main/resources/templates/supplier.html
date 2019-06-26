@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 
     <!-- Basic page needs
@@ -995,7 +995,6 @@
                         <td class="text-center">图片</td>
                         <td class="text-left">商品名</td>
                         <td class="text-left">型号</td>
-                        <td class="text-left">出库数量</td>
                         <td class="text-left">入库数量</td>
                         <td class="text-center">库存数量</td>
                         <td class="text-center">一键发货</td>
@@ -1007,38 +1006,30 @@
                         <td class="text-left"><a href="product.html">红鞋</a><br />
                         </td>
                         <td class="text-left">Pt 001</td>
+                        <form action="checkin1.html">
                         <td class="text-left" width="200px"><div class="input-group btn-block quantity">
-                            <input  id="reset1" type="text" name="quantity" value="0" size="1" class="form-control" />
+                            <input id="reset2" type="text" name="quantity1" value="0" size="1" class="form-control" />
                             <span class="input-group-btn">
-                        <button  type="button" data-toggle="tooltip" title="Update" class="btn btn-primary" onclick="out1()"><i class="fa fa-clone"></i></button>
-                        <button  type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onClick="supplier_reset1()"><i class="fa fa-times-circle"></i></button>
-                        </span></div></td>
-                        <td class="text-left" width="200px"><div class="input-group btn-block quantity">
-                            <input id="reset2" type="text" name="quantity" value="0" size="1" class="form-control" />
-                            <span class="input-group-btn">
-                        <button type="button" data-toggle="tooltip" title="Update" class="btn btn-primary" onclick="in1()"><i class="fa fa-clone"></i></button>
+                        <button type="submit" data-toggle="tooltip" title="Update" class="btn btn-primary" ><i class="fa fa-clone"></i></button>
                         <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onClick="supplier_reset2()"><i class="fa fa-times-circle"></i></button>
                         </span></div></td>
-                        <td id="storage1" class="text-center"></td>
+                        </form>
+                        <td id="storage1" class="text-center" th:text="${quantity1}"></td>
                         <td align="center"><a href="send.html"><button type="button" class="btn_send" title="点击对此商品发货" >发货</button></a></td>
                     </tr>
                     <tr>
                         <td class="text-center"><a href="product.html"><img width="70px" src="image/catalog/demo/product/fashion/10.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes" class="img-thumbnail" /></a></td>
                         <td class="text-left"><a href="product.html">水钻鞋</a></td>
                         <td class="text-left">Pt 002</td>
+                        <form action="/checkin2.html">
                         <td class="text-left" width="200px"><div class="input-group btn-block quantity">
-                            <input id="reset3" type="text" name="quantity" value="0" size="1" class="form-control" />
+                            <input id="reset4" type="text" name="quantity2" value="0" size="1" class="form-control" />
                             <span class="input-group-btn">
-                        <button type="button" data-toggle="tooltip" title="Update" class="btn btn-primary" onclick="out2()"><i class="fa fa-clone"></i></button>
-                        <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onClick="supplier_reset3()"><i class="fa fa-times-circle"></i></button>
-                        </span></div></td>
-                        <td class="text-left" width="200px"><div class="input-group btn-block quantity">
-                            <input id="reset4" type="text" name="quantity" value="0" size="1" class="form-control" />
-                            <span class="input-group-btn">
-                        <button type="button" data-toggle="tooltip" title="Update" class="btn btn-primary" onclick="in2()"><i class="fa fa-clone"></i></button>
+                        <button type="submit" data-toggle="tooltip" title="Update" class="btn btn-primary" ><i class="fa fa-clone"></i></button>
                         <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onClick="supplier_reset4()"><i class="fa fa-times-circle"></i></button>
                         </span></div></td>
-                        <td id="storage2" class="text-center"></td>
+                        </form>
+                        <td id="storage2" class="text-center" th:text="${quantity2}"></td>
                         <td align="center"><a href="send.html"><button type="button" class="btn_send" title="点击对此商品发货" >发货</button></a></td>
                     </tr>
                     </tbody>
