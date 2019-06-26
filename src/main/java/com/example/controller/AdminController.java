@@ -105,4 +105,66 @@ public class AdminController {
 
     }
 
+    @RequestMapping("/select_user_role.html")
+    public String admin_select_role(HttpServletRequest request, Model model) throws IOException{
+
+        String user_id_input = null;
+
+        user_id_input = request.getParameter("role_user_id_input");
+
+        if(adminMapper.select_user_info(user_id_input)!=null){
+
+            model.addAttribute("user_id",user_id_input);
+            model.addAttribute("user_name",adminMapper.select_user_info(user_id_input).getUserName());
+
+            switch (adminMapper.select_user_info(user_id_input).getStatus()){
+                case 0:
+                    model.addAttribute("user_status","普通用户");
+                    break;
+                case 1:
+                    model.addAttribute("user_status","商店卖家");
+                    break;
+                case 2:
+                    model.addAttribute("user_status","供应商");
+                    break;
+                case 3:
+                    model.addAttribute("user_status","VIP用户");
+                    break;
+            }
+
+        }
+        else {
+            model.addAttribute("user_id","修改失败，请重新输入用户ID！");
+            return "administrator";
+        }
+
+        return "administrator";
+    }
+
+    @RequestMapping("/modify_user_role.html")
+    public String admin_modify_role(HttpServletRequest request, Model model) throws IOException{
+
+        String user_id = null;
+        String user_status = null;
+
+        user_id = request.getParameter("user_id_role");
+        user_status = request.getParameter("role_value");
+
+        if(!user_id.isEmpty()){
+
+            if(!user_status.isEmpty()){
+                adminMapper.set_userStatus(Integer.parseInt(user_status),user_id);
+            }
+
+        }
+        else{
+            model.addAttribute("user_id","修改失败，请重新选择用户权限！");
+            return "administrator";
+        }
+
+
+        return "administrator";
+    }
+
+
 }

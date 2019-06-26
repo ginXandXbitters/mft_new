@@ -37,4 +37,7 @@ public interface AdminMapper {
     @Update("update user set site = #{user_site} where userID = #{user_id}")
     public void set_userSite(String user_site, String user_id);
 
+    @Update("update user set status = #{user_status} where userID = #{user_id}")
+    public void set_userStatus(Integer user_status, String user_id);
+
 }
