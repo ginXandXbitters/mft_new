@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-                                                    <html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
                                                     <head>
 
                                                         <!-- Basic page needs
@@ -986,7 +986,7 @@
 
 
                                                         <!-- Main Container  -->
-                                                        <div class="main-container container" style="height:600px">
+                                                        <div class="main-container container" style="height:950px">
                                                             <h2 class="title">欢迎管理员登录[<a href="login.html">退出</a>]</h2>
                                                             <aside class="col-sm-4 col-md-3 content-aside" id="column-left">
                                                                 <div class="module category-style">
@@ -1038,62 +1038,111 @@
                                 </div>
                             </div>
                         </aside>
+
+
+
                         <div class="right1"style="float:left ; width:60%; height:100%;">
+
+                            <form action="select_user_role.html" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
+                                <fieldset>
+                                    <legend>用户权限管理</legend>
+
+                                    <div class="form-group required">
+                                        <label for="input-product" class="col-sm-2 control-label">请输入用户ID</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="role_user_id_input" placeholder="输入用户ID..." value="" name="role_user_id_input">
+                                        </div>
+
+                                        <div class="pull-right">
+                                            <input type="submit" class="btn btn-primary" value="查询">
+                                        </div>
+
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                            <br/><br/>
+
+
                             <fieldset>
-                                <legend>权限管理</legend>
+                                <legend>查询结果</legend>
+                                <div class="form-group">
+                                    <label for="input-product" class="col-sm-2 control-label">用户ID</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="user_ID" placeholder="" th:value="${user_id}" name="user_id_select" readonly="true">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-product" class="col-sm-2 control-label">用户名称</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="user_name" placeholder="" th:value="${user_name}" name="product" readonly="true">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-product" class="col-sm-2 control-label">用户角色</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="email" placeholder="" th:value="${user_status}" name="product" readonly="true">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/><br/>
+
+
+                        <form action="modify_user_role.html" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
+                            <fieldset>
+                                <legend>权限设置</legend>
                                 <div class="form-group required">
                                     <label for="input-product" class="col-sm-2 control-label">用户ID</label>
                                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="input-product" placeholder="用户ID" value="" name="product">
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="form-group required">
-                    <label class="col-sm-2 control-label">设定用户类型</label>
-                    <div class="col-sm-10">
-                        <div class="radio">
-                            <label>
-                                <input type="radio" value="1" name="return_reason_id"> VIP用户</label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" value="3" name="return_reason_id"> 普通用户</label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" value="2" name="return_reason_id"> 购物商店</label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" value="5" name="return_reason_id"> 供应商
-                            </label>
-                        </div>
+                                        <input type="text" class="form-control" id="input-product" placeholder="用户ID"  th:value="${user_id}"  name="user_id_role"  readonly="true">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="form-group required">
+                                    <label class="col-sm-2 control-label">设定用户类型</label>
+                                    <div class="col-sm-10">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" value="3" name="role_value"> VIP用户</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" value="0" name="role_value"> 普通用户</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" value="1" name="role_value"> 购物商店</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" value="2" name="role_value"> 供应商
+                                            </label>
+                                        </div>
 
-                    </div>
-                </div>
-                <div class="form-group required">
-                    <label class="col-sm-2 control-label">是否禁止登陆</label>
-                    <div class="col-sm-10">
-                        <label class="radio-inline">
-                            <input type="radio" value="1" name="opened"> Yes
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" checked="checked" value="0" name="opened"> No
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="input-comment" class="col-sm-2 control-label">请输入操作说明：</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" id="input-comment" placeholder="操作说明" rows="5" name="comment"></textarea>
-                    </div>
-                </div>
+                                    </div>
+                                </div>
 
-            </fieldset>
-                <div class="pull-right">
-                    <input type="submit" class="btn btn-primary" value="提交">
-                </div>
+                                <br>
+                                <br>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">请输入操作说明</label>
+                                    <div class="col-sm-9">
+                                        <textarea class="form-control" id="input-comment" placeholder="操作说明" rows="5" name="comment"></textarea>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <input type="submit" class="btn btn-primary" value="提交">
+                                </div>
+                            </fieldset>
+                        </form>
+
+
+
             </div>
         </div>
     </div>
