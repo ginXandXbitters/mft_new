@@ -1,7 +1,9 @@
 package com.example.controller;
 
 import com.example.domain.Admin;
+import com.example.domain.Sellpage;
 import com.example.mapper.LoginMapper;
+import com.example.mapper.StoreMapper;
 import com.example.mapper.SupplierMapper;
 import com.example.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+
 import org.springframework.ui.Model;
 
 @Controller
@@ -22,6 +26,8 @@ public class LoginController {
     LoginMapper loginMapper;
     @Autowired
     SupplierMapper supplierMapper;
+    @Autowired
+    StoreMapper storeMapper;
     @RequestMapping("/login.html")
     public String login_page(){
 
@@ -87,7 +93,7 @@ public class LoginController {
     }
 
     @RequestMapping("/seller_homepage.html")
-    public String store_login(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    public String store_login(HttpServletRequest request, HttpServletResponse response,Model model) throws IOException{
         String store_pwd;
         String receive_pwd;
 
@@ -98,6 +104,8 @@ public class LoginController {
             receive_pwd=request.getParameter("store_pwd");
 
             if(store_pwd.equals(receive_pwd)){
+                List<Sellpage> sp=storeMapper.StorepageList();
+                model.addAttribute("sp",sp);
                 return "seller_homepage";
             }
             else{
