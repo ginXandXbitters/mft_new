@@ -26,7 +26,7 @@ public class LoginController {
         return "login";
     }
 
-    @RequestMapping("/administrator.html")
+    @RequestMapping("/admin_login.html")
     public String admin_login(HttpServletRequest request, Model model) throws IOException {
         String admin_pwd;
         String receive_pwd;
