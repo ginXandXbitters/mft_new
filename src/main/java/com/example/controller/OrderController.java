@@ -27,8 +27,9 @@ public class OrderController {
         model.addAttribute("cartlist",cartlist);
         return "checkout";
     }
+
     @RequestMapping("/index_after_checkout.html")
-    protected String processRequest(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
+    public String processRequest(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
 
         //1.获取客户端提交的信息
         String orderID = "";
@@ -43,8 +44,10 @@ public class OrderController {
         String buyTime = formatter.format(currentTime); //将日期时间格式化
 
 
+
         List<Cart> cartlist = cartMapper.ShowCart(LoginController.get_user_id);
         model.addAttribute("cartlist",cartlist);
+
 
         for (int i = 0; i < cartlist.size(); i++) {
 
@@ -54,7 +57,9 @@ public class OrderController {
 
             System.out.println(goodId+quantity+buyTime);
 
-            orderMapper.InsertOrder(orderID, LoginController.get_user_id, goodId, quantity,buyTime);
+
+
+            orderMapper.InsertOrder(orderID, LoginController.get_user_id, goodId, quantity, buyTime);
 
 //            if (!isOrder) {
 //                response.getWriter().write("添加订单失败");

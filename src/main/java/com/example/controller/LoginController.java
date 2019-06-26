@@ -25,10 +25,13 @@ public class LoginController {
 static  String get_user_id;
     @Autowired
     LoginMapper loginMapper;
+
     @Autowired
     SupplierMapper supplierMapper;
+
     @Autowired
     StoreMapper storeMapper;
+
     @RequestMapping("/login.html")
     public String login_page(){
 

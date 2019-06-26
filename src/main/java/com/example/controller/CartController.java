@@ -21,13 +21,15 @@ public class CartController {
 
     @RequestMapping("/cart.html")
     protected String processRequest(Model model) {
+
 //        request.setCharacterEncoding("UTF-8");
 //        response.setContentType("text/html;charset=utf-8");
-String key=LoginController.get_user_id;
-System.out.println(key);
-        List<Cart> cartlist = cartMapper.ShowCart(key);
-       model.addAttribute("cartlist",cartlist);
 
-       return "cart";
+        String key=LoginController.get_user_id;
+        System.out.println(key);
+        List<Cart> cartlist = cartMapper.ShowCart(key);
+        model.addAttribute("cartlist",cartlist);
+
+        return "cart";
     }
 }
