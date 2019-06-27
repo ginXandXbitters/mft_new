@@ -22,7 +22,8 @@ import org.springframework.ui.Model;
 
 @Controller
 public class LoginController {
-static  String get_user_id;
+    static  String get_user_id;
+
     @Autowired
     LoginMapper loginMapper;
 

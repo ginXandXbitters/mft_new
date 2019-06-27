@@ -18,9 +18,19 @@ public interface AdminMapper {
     @Select("select * from user where userID=#{user_id}")
     public User select_user_info(String user_id);
 
+
     //更新账号信息
+    @Update("update user set userID = #{user_new_id} where userID = #{user_id}")
+    public void set_userID(String user_new_id, String user_id);
+
+    @Update("update user set userPw = #{user_pwd} where userID = #{user_id}")
+    public void set_userPwd(String user_pwd, String user_id);
+
     @Update("update user set userName = #{user_name} where userID = #{user_id}")
     public void set_userName(String user_name, String user_id);
+
+    @Update("update user set userTel = #{user_tel} where userID = #{user_id}")
+    public void set_userTel(String user_tel, String user_id);
 
     @Update("update user set userMail = #{user_mail} where userID = #{user_id}")
     public void set_userMail(String user_mail, String user_id);

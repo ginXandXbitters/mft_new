@@ -96,10 +96,10 @@ public class MapperController {
     public String NavigateTohome3(){
         return "home3";
     }
-    @RequestMapping("/my-account.html")
-    public String NavigateToac(){
-        return "my-account";
-    }
+//    @RequestMapping("/my-account.html")
+//    public String NavigateToac(){
+//        return "my-account";
+//    }
     @RequestMapping("/order-history.html")
     public String NavigateTooh(){
         return "order-history";
