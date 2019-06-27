@@ -1,6 +1,6 @@
 ﻿
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     
     <!-- Basic page needs
@@ -996,27 +996,28 @@
 			<!--Middle Part Start-->
 			<div class="col-sm-9" id="content">
 				<h2 class="title">我的账户</h2>
-				<p class="lead">你好， <strong>游乐王子!</strong> - 你可以在这里更改你的个人信息</p>
-				<form>
+				<p class="lead">你好， <strong><span th:text="${user_sel_name}"></span></strong> 你可以在这里更改你的个人信息</p>
+
+				<form action="modify_user_info.html" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
 					<div class="row">
 						<div class="col-sm-6">
 							<fieldset id="personal-details">
 								<legend>个人信息</legend>
 								<div class="form-group required">
-									<label for="input-firstname" class="control-label">姓名</label>
-									<input type="text" class="form-control" id="input-firstname" placeholder="姓名" value="" name="firstname">
+									<label for="user_name_modify" class="control-label">姓名</label>
+									<input type="text" class="form-control" id="user_name_modify" placeholder="姓名" th:value="${th_name}" name="user_name_modify">
 								</div>
 								<div class="form-group required">
 									<label for="input-lastname" class="control-label">帐号</label>
-									<input type="text" class="form-control" id="input-lastname" placeholder="帐号" value="" name="lastname">
+									<input type="text" class="form-control" id="input-lastname" placeholder="帐号" th:value="${th_id}" name="user_id_modify">
 								</div>
 								<div class="form-group required">
 									<label for="input-email" class="control-label">电子邮件</label>
-									<input type="email" class="form-control" id="input-email" placeholder="电子邮件" value="" name="email">
+									<input type="email" class="form-control" id="input-email" placeholder="电子邮件"th:value="${th_mail}" name="user_mail_modify">
 								</div>
 								<div class="form-group required">
 									<label for="input-telephone" class="control-label">手机</label>
-									<input type="tel" class="form-control" id="input-telephone" placeholder="手机" value="" name="telephone">
+									<input type="tel" class="form-control" id="input-telephone" placeholder="手机" th:value="${th_tel}" name="user_tel_modify">
 								</div>
 							</fieldset>
 							<br>
@@ -1025,16 +1026,16 @@
 							<fieldset>
 								<legend>更改密码</legend>
 								<div class="form-group required">
-									<label for="input-password" class="control-label">原密码</label>
-									<input type="password" class="form-control"  placeholder="原密码" value="" name="old-password">
+									<label  class="control-label">原密码</label>
+									<input type="text" class="form-control"  placeholder="原密码" th:value="${th_old_pwd}" name="user_old_pwd">
 								</div>
 								<div class="form-group required">
-									<label for="input-password" class="control-label">新密码</label>
-									<input type="password" class="form-control"  placeholder="新密码" value="" name="new-password">
+									<label  class="control-label">新密码</label>
+									<input type="password" class="form-control"  placeholder="新密码" value="" name="user_new_pwd">
 								</div>
 								<div class="form-group required">
 									<label for="input-confirm" class="control-label">确认密码</label>
-									<input type="password" class="form-control" id="input-confirm" placeholder="确认密码" value="" name="new-confirm">
+									<input type="password" class="form-control" id="input-confirm" placeholder="确认密码"  name="user_new_confirm">
 								</div>
 							</fieldset>
 							<fieldset>
@@ -1058,22 +1059,22 @@
 							<fieldset id="address">
 								<legend>收货地址</legend>
 								<div class="form-group">
-									<label for="input-company" class="control-label">省/直辖市</label>
+									<label  class="control-label">省/直辖市</label>
 
-									<input type="text" class="form-control"  placeholder="省/直辖市" value="" name="company">
+									<input type="text" class="form-control"  placeholder="省/直辖市" th:value="${th_prov}" name="user_province_modify">
 
 								</div>
 								<div class="form-group required">
-									<label for="input-address-1" class="control-label">市/直辖区</label>
-									<input type="text" class="form-control"  placeholder="市/直辖区" value="" name="address_1">
+									<label  class="control-label">市/直辖区</label>
+									<input type="text" class="form-control"  placeholder="市/直辖市" th:value="${th_city}" name="user_city_modify">
 								</div>
 								<div class="form-group required">
-									<label for="input-city" class="control-label">区/县</label>
-									<input type="text" class="form-control" placeholder="区/县" value="" name="city">
+									<label  class="control-label">区/县</label>
+									<input type="text" class="form-control" placeholder="区/县" th:value="${th_coun}" name="user_coun_modify">
 								</div>
 								<div class="form-group required">
-									<label for="input-postcode" class="control-label">详细地址</label>
-									<input type="text" class="form-control"  placeholder="详细地址" value="" name="postcode">
+									<label  class="control-label">详细地址</label>
+									<input type="text" class="form-control"  placeholder="详细地址" th:value="${th_site}" name="user_site_modify">
 								</div>
 							</fieldset>
 						</div>
@@ -1087,6 +1088,7 @@
 						</div>
 					</div>
 				</form>
+
 			</div>
 			<!--Middle Part End-->
 			<!--Right Part Start -->
