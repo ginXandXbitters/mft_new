@@ -66,8 +66,13 @@ public class OrderController {
 //                return "checkout";
 //            }
         }
-        return "index";
+        return "pay";
     }
 
+    @RequestMapping("/finish_pay.html")
+    public String finish_page(){
+
+        return "index_user";
+    }
 
 }
