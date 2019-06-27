@@ -32,4 +32,10 @@ public class CartController {
 
         return "cart";
     }
+    @RequestMapping("/index_incart.html")
+    public String intocart(){
+        cartMapper.incart("10161856","1","g03","100");
+
+        return "index";
+    }
 }
