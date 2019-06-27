@@ -142,7 +142,7 @@ public class MapperController {
     }
     @RequestMapping("/StoreToSupplier.html")
     public String NavigateTosts(){
-        return "StoreToSupplie";
+        return "StoreToSupplier";
     }
     @RequestMapping("/supplier-order.html")
     public String NavigateTosupplierorder(){
