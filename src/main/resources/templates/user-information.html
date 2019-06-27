@@ -1,4 +1,4 @@
-
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1033,7 +1033,7 @@
 
 
     <!-- Main Container  -->
-    <div class="main-container container" style="height:850px">
+    <div class="main-container container" style="height:1000px">
                         <h2 class="title">欢迎管理员登录[<a href="login.html">退出</a>]</h2>
                         <aside class="col-sm-4 col-md-3 content-aside" id="column-left">
                             <div class="module category-style">
@@ -1087,7 +1087,7 @@
                         </aside>
                         <div class="right1"style="float:left ; width:60%; height:100%;">
                             <div>
-                                <form action="user-information/select_userinfo.html" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
+                                <form action="select_userinfo.html" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
                                     <fieldset>
                                         <legend>用户信息管理</legend>
 
@@ -1111,80 +1111,100 @@
 
                                 <fieldset>
                                    <legend>查询结果</legend>
-                                <div class="form-group">
-                                    <label for="input-product" class="col-sm-2 control-label">用户名称</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="userID" placeholder="" value="" name="product" readonly="true">
+                                    <div class="form-group">
+                                        <label for="input-product" class="col-sm-2 control-label">用户ID</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="user_ID" placeholder="" th:value="${user_id}" name="user_id_select" readonly="true">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="input-product" class="col-sm-2 control-label">E-mail</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="email" placeholder="" value="" name="product" readonly="true">
+
+                                    <div class="form-group">
+                                        <label for="input-product" class="col-sm-2 control-label">用户名称</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="user_name" placeholder="" th:value="${user_name}" name="product" readonly="true">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="input-company">省/直辖市</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" name="company" value=""  id="province" class="form-control" readonly="true">
+
+                                    <div class="form-group">
+                                        <label for="input-product" class="col-sm-2 control-label">E-mail</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="email" placeholder="" th:value="${user_mail}" name="product" readonly="true">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="input-address-1">市/直辖市</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" name="address_1" value=""  id="city" class="form-control" readonly="true">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="input-address-2">区县</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" name="address_2" value="" id="county" class="form-control" readonly="true">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="input-postcode">详细地址</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" name="postcode" value=""  id="detail" class="form-control" readonly="true">
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <br/><br/>
-                            <fieldset>
-                                <legend>修改用户信息</legend>
-                                <div class="form-group">
-                                    <label for="input-product" class="col-sm-2 control-label">用户名称</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="input-product" placeholder="" value="" name="product">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="input-product" class="col-sm-2 control-label">E-mail</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="input-product1" placeholder="" value="" name="product">
-                                    </div>
-                                </div>
+
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label" for="input-company">省/直辖市</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="company" value=""  id="input-company" class="form-control">
+                                            <input type="text" name="company" th:value="${user_province}"  id="province" class="form-control" readonly="true">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label" for="input-address-1">市/直辖市</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="address_1" value=""  id="input-address-1" class="form-control">
+                                            <input type="text" name="address_1" th:value="${user_city}"  id="city" class="form-control" readonly="true">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label" for="input-address-2">区县</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="address_2" value="" id="input-address-2" class="form-control">
+                                            <input type="text" name="address_2" th:value="${user_coun}" id="county" class="form-control" readonly="true">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label" for="input-postcode">详细地址</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="postcode" value=""  id="input-postcode" class="form-control">
+                                            <input type="text" name="postcode" th:value="${user_site}"  id="detail" class="form-control" readonly="true">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            <br/><br/>
+
+                        <form action="admin_modify_user_info.html" method="post" enctype="multipart/form-data">
+                            <fieldset>
+                                <legend>修改用户信息</legend>
+
+                                <div class="form-group">
+                                    <label for="input-product" class="col-sm-2 control-label">用户ID</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="user_ID_to_modify" placeholder="" th:value="${user_id}" name="user_id_modify" readonly="true">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-product" class="col-sm-2 control-label">用户名称</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="input-product" placeholder="" value="" name="user_name_modify">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-product" class="col-sm-2 control-label">E-mail</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="input-product1" placeholder="" value="" name="user_mail_modify">
+                                    </div>
+                                </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="input-company">省/直辖市</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" value=""  id="input-company" class="form-control" name="user_province_modify">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="input-address-1">市/直辖市</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"  value="" id="input-address-1" class="form-control" name="user_city_modify">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="input-address-2">区县</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"  value="" id="input-address-2" class="form-control"  name="user_coun_modify">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" for="input-postcode">详细地址</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" value=""  id="input-postcode" class="form-control" name="user_site_modify">
                                         </div>
                                     </div>
                             </fieldset>
@@ -1192,6 +1212,7 @@
                             <div class="align-center">
                                 <input type="submit" class="btn btn-primary" value="修改为当前值">
                             </div>
+                        </form>
             </div>
         </div>
     </div>

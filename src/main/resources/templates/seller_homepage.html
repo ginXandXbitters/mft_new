@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 
     <!-- Basic page needs
@@ -1046,19 +1046,21 @@
                         </div>
                     </div>
                     <div class="blog-listitem row">
-                        <div class="blog-item col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+
+                        <div th:each="sp:${sp}" class="blog-item col-lg-4 col-md-4 col-sm-6 col-xs-12">
                             <div class="blog-item-inner clearfix">
 
                                 <div class="itemBlogImg clearfix">
                                     <div class="article-image">
                                         <div>
-                                            <a class="popup-gallery" href="image/catalog/seller/4.jpg">
-                                                <img src="image/catalog/seller/4.jpg" />
+                                            <a class="popup-gallery" th:href="|image/catalog/seller/${sp.sell_img}|">
+                                                <img th:src="|image/catalog/seller/${sp.sell_img}|" />
                                             </a>
                                         </div>
                                         <div class="article-date">
                                             <div class="date">  <span class="article-date">
-                                                <b>01</b> 现货
+                                                 现货
                                             </span>
                                             </div>
                                         </div>
@@ -1068,11 +1070,11 @@
                                 <div class="itemBlogContent clearfix ">
                                     <div class="blog-content">
                                         <div class="article-title font-title">
-                                            <h4><a href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html">宝驴 GT 1080</a></h4>
+                                            <h4><a href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html" th:text="${sp.sell_name}"></a></h4>
                                         </div>
-                                        <div class="blog-meta"> <span class="author"><i class="fa fa-user"></i><span>供应商 </span>阿里爹爹 18000008888</span>
+                                        <div class="blog-meta"> <span class="author" ><i class="fa fa-user"></i><span>供应商: </span><span th:text="${sp.sell_sup}"></span></span>
                                         </div>
-                                        <p class="article-description"><b>售价：</b>1，200，000</p>
+                                        <p class="article-description" th:text="|售价:   ￥${sp.sell_price}|"></p>
                                         <div class="readmore">  <a class="btn-readmore font-title" href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html"><i class="fa fa-caret-right"></i>查看详情</a>
                                         </div>
                                     </div>
@@ -1080,166 +1082,15 @@
                             </div>
                         </div>
 
-                        <div class="blog-item col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="blog-item-inner clearfix">
-                                <div class="itemBlogImg clearfix">
-                                    <div class="article-image">
-                                        <div>
-                                            <a class="popup-gallery" href="image/catalog/seller/2.jpg">
-                                                <img src="image/catalog/seller/2.jpg" />
-                                            </a>
-                                        </div>
-                                        <div class="article-date">
-                                            <div class="date">
-                                                <span class="article-date">
-                                                    <b>02</b> 现货
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="itemBlogContent clearfix ">
-                                    <div class="blog-content">
-                                        <div class="article-title font-title">
-                                            <h4><a href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html">豪华版尊贵TATA马桶 可自动清洗屁屁</a></h4>
-                                        </div>
-                                        <div class="blog-meta"> <span class="author"><i class="fa fa-user"></i><span>供应商 </span>飞讯马桶 13366668888</span>
-                                        </div>
-                                        <p class="article-description"><b>售价：</b>2，000</p>
-                                        <div class="readmore">  <a class="btn-readmore font-title" href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html"><i class="fa fa-caret-right"></i>查看详情</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="blog-item col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="blog-item-inner clearfix">
-                                <div class="itemBlogImg clearfix">
-                                    <div class="article-image">
-                                        <div>
-                                            <a class="popup-gallery" href="image/catalog/seller/7.jpg">
-                                                <img src="image/catalog/seller/7.jpg" />
-                                            </a>
-                                        </div>
-                                        <div class="article-date">
-                                            <div class="date">
-                                                <span class="article-date">
-                                                    <b>03</b>现货
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="itemBlogContent clearfix ">
-                                    <div class="blog-content">
-                                        <div class="article-title font-title">
-                                            <h4><a href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html">蓝翔专用挖掘机 ATK 2080 力量大可爬墙</a></h4>
-                                        </div>
-                                        <div class="blog-meta"> <span class="author"><i class="fa fa-user"></i><span>供应商 </span>中国山东蓝翔特技学校 13066663333</span>
-                                        </div>
-                                        <p class="article-description"><b>售价：</b>666，000</p>
-                                        <div class="readmore">  <a class="btn-readmore font-title" href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html"><i class="fa fa-caret-right"></i>查看详情</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="blog-item col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="blog-item-inner clearfix">
-                                <div class="itemBlogImg clearfix">
-                                    <div class="article-image">
-                                        <div>
-                                            <a class="popup-gallery" href="image/catalog/seller/6.jpg">
-                                                <img src="image/catalog/seller/6.jpg"  />
-                                            </a>
-                                        </div>
-                                        <div class="article-date">
-                                            <div class="date">  <span class="article-date">
-                                                                                                                                               <b>04</b>现货
-                                                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="itemBlogContent clearfix ">
-                                    <div class="blog-content">
-                                        <div class="article-title font-title">
-                                            <h4><a href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html">Gogan 冰种玉镯</a></h4>
-                                        </div>
-                                        <div class="blog-meta"> <span class="author"><i class="fa fa-user"></i><span>供应商</span>新疆玉店</span>   <span class="comment_count"><i class="fa fa-comment-o"></i><a href="#">13761032710</a></span>
-                                        </div>
-                                        <div class="readmore">  <a class="btn-readmore font-title" href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html"><i class="fa fa-caret-right"></i>查看详情</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="blog-item col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="blog-item-inner clearfix">
-                                <div class="itemBlogImg clearfix">
-                                    <div class="article-image">
-                                        <div>
-                                            <a class="popup-gallery" href="image/catalog/seller/5.jpg">
-                                                <img src="image/catalog/seller/5.jpg" />
-                                            </a>
-                                        </div>
-                                        <div class="article-date">
-                                            <div class="date">  <span class="article-date">
-                                                                                                                                               <b>05</b>现货
-                                                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="itemBlogContent clearfix ">
-                                    <div class="blog-content">
-                                        <div class="article-title font-title">
-                                            <h4><a href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html">GAGGIA 咖啡机</a></h4>
-                                        </div>
-                                        <div class="blog-meta"> <span class="author"><i class="fa fa-user"></i><span>供应商</span>GAGGIA</span>
-                                        </div>
 
-                                        <div class="readmore">  <a class="btn-readmore font-title" href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html"><i class="fa fa-caret-right"></i>了解更多</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="blog-item col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="blog-item-inner clearfix">
-                                <div class="itemBlogImg clearfix">
-                                    <div class="article-image">
-                                        <div>
-                                            <a class="popup-gallery" href="image/catalog/seller/3.jpg">
-                                                <img src="image/catalog/seller/3.jpg" />
-                                            </a>
-                                        </div>
-                                        <div class="article-date">
-                                            <div class="date">  <span class="article-date">
-                                                                                                                                               <b>06</b>现货
-                                                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="itemBlogContent clearfix ">
-                                    <div class="blog-content">
-                                        <div class="article-title font-title">
-                                            <h4><a href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html">黑衣人限量款手办</a></h4>
-                                        </div>
-                                        <div class="blog-meta"> <span class="author"><i class="fa fa-user"></i><span>供应商 </span>TD珍藏手办</span>   <span class="comment_count"><i class="fa fa-comment-o"></i><a href="#">0 Comments</a></span>
-                                        </div>
 
-                                        <div class="readmore">  <a class="btn-readmore font-title" href="../../../../../demo.smartaddons.com/templates/html/supermarket/blog-detail.html"><i class="fa fa-caret-right"></i>了解更多</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+
+
 
                     </div>
                     <div class="product-filter product-filter-bottom filters-panel clearfix">
